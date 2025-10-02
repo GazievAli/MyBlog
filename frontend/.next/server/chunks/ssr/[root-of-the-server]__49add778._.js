@@ -34,7 +34,7 @@ function Main() {
             }, void 0, false, {
                 fileName: "[project]/src/components/Header/Main.tsx",
                 lineNumber: 6,
-                columnNumber: 3
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "container mx-auto px-4 sm:px-6 lg:px-8 h-full relative z-10",
@@ -43,69 +43,89 @@ function Main() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col justify-center items-center",
-                            children: [
-                                " ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full max-w-md text-left",
-                                    children: [
-                                        " ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                            className: "text-5xl md:text-5xl font-bold mb-4 text-white",
-                                            children: "Али Газиев"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Header/Main.tsx",
-                                            lineNumber: 20,
-                                            columnNumber: 13
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xl md:text-2xl text-white/90 leading-relaxed",
-                                            children: [
-                                                "Слева - Next, справа - Nest, посередине - я и чашка кофе, создаю приложения, которые не стыдно показать маме и да, мой код иногда работает с ",
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "bg-gradient-to-r from-red-400 via-purple-500 to-blue-400 bg-clip-text text-transparent bg-size-200 animate-gradient",
-                                                    children: "ПЕРВОГО"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/Header/Main.tsx",
-                                                    lineNumber: 22,
-                                                    columnNumber: 158
-                                                }, this),
-                                                " раза!"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/components/Header/Main.tsx",
-                                            lineNumber: 21,
-                                            columnNumber: 13
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Header/Main.tsx",
-                                    lineNumber: 19,
-                                    columnNumber: 9
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-full max-w-md text-center sm:text-left",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                        className: "text-5xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent",
+                                        children: "Али Газиев"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Header/Main.tsx",
+                                        lineNumber: 19,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xl md:text-2xl text-white/90 leading-relaxed",
+                                        children: [
+                                            "Слева — ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-rose-400",
+                                                children: "Next"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Header/Main.tsx",
+                                                lineNumber: 23,
+                                                columnNumber: 25
+                                            }, this),
+                                            ", справа — ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-rose-400",
+                                                children: "Nest"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Header/Main.tsx",
+                                                lineNumber: 23,
+                                                columnNumber: 79
+                                            }, this),
+                                            ", посередине — я и ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-amber-200",
+                                                children: "чашка кофе ☕"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Header/Main.tsx",
+                                                lineNumber: 23,
+                                                columnNumber: 141
+                                            }, this),
+                                            ". Создаю приложения, которые не стыдно показать маме. И да, мой код иногда работает с ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "bg-gradient-to-r from-red-400 via-purple-500 to-blue-400 bg-clip-text text-transparent bg-size-200 animate-gradient",
+                                                children: "ПЕРВОГО"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Header/Main.tsx",
+                                                lineNumber: 23,
+                                                columnNumber: 279
+                                            }, this),
+                                            " раза!"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/Header/Main.tsx",
+                                        lineNumber: 22,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Header/Main.tsx",
+                                lineNumber: 18,
+                                columnNumber: 9
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/src/components/Header/Main.tsx",
-                            lineNumber: 18,
+                            lineNumber: 17,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "hidden md:flex justify-end",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "relative w-[90%] aspect-square mr-4",
-                                children: [
-                                    " ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        src: "/legendaaa.jpg",
-                                        alt: "My Photo",
-                                        fill: true,
-                                        className: "object-cover rounded-lg shadow-xl"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Header/Main.tsx",
-                                        lineNumber: 30,
-                                        columnNumber: 11
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/legendaaa.jpg",
+                                    alt: "My Photo",
+                                    fill: true,
+                                    className: "object-cover rounded-lg shadow-xl"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Header/Main.tsx",
+                                    lineNumber: 30,
+                                    columnNumber: 11
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Main.tsx",
                                 lineNumber: 29,
                                 columnNumber: 9
@@ -184,7 +204,7 @@ function NavBar() {
                         className: "flex items-center",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                             className: "text-2xl tracking-tight",
-                            children: "Gaziev Ali"
+                            children: "Газиев Али"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header/NavBar.tsx",
                             lineNumber: 14,
@@ -206,7 +226,7 @@ function NavBar() {
                         className: "flex items-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex mr-3",
+                                className: "hidden md:flex mr-3",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                         xmlns: "http://www.w3.org/2000/svg",
@@ -220,12 +240,12 @@ function NavBar() {
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Header/NavBar.tsx",
                                             lineNumber: 24,
-                                            columnNumber: 33
+                                            columnNumber: 7
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
                                         lineNumber: 23,
-                                        columnNumber: 29
+                                        columnNumber: 5
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "ml-2",
@@ -235,18 +255,18 @@ function NavBar() {
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Header/NavBar.tsx",
                                             lineNumber: 27,
-                                            columnNumber: 33
+                                            columnNumber: 7
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
                                         lineNumber: 26,
-                                        columnNumber: 29
+                                        columnNumber: 5
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Header/NavBar.tsx",
                                 lineNumber: 22,
-                                columnNumber: 25
+                                columnNumber: 3
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex",
@@ -263,40 +283,40 @@ function NavBar() {
                                                     d: "M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                    lineNumber: 35,
-                                                    columnNumber: 37
+                                                    lineNumber: 36,
+                                                    columnNumber: 9
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                     d: "M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                    lineNumber: 36,
-                                                    columnNumber: 37
+                                                    lineNumber: 37,
+                                                    columnNumber: 9
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Header/NavBar.tsx",
-                                            lineNumber: 34,
-                                            columnNumber: 33
+                                            lineNumber: 35,
+                                            columnNumber: 7
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "ml-2",
                                             children: "Написать мне"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Header/NavBar.tsx",
-                                            lineNumber: 38,
-                                            columnNumber: 33
+                                            lineNumber: 39,
+                                            columnNumber: 7
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Header/NavBar.tsx",
-                                    lineNumber: 33,
-                                    columnNumber: 29
+                                    lineNumber: 34,
+                                    columnNumber: 5
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                lineNumber: 32,
-                                columnNumber: 25
+                                lineNumber: 33,
+                                columnNumber: 3
                             }, this)
                         ]
                     }, void 0, true, {
