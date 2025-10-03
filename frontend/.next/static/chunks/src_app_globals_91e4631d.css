@@ -116,12 +116,10 @@
     --color-blue-500: #3080ff;
     --color-purple-500: #ac4bff;
     --color-rose-400: #ff667f;
-    --color-gray-100: #f3f4f6;
     --color-gray-300: #d1d5dc;
     --color-gray-500: #6a7282;
     --color-gray-800: #1e2939;
     --color-gray-900: #101828;
-    --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
     --container-md: 28rem;
@@ -161,7 +159,6 @@
       --color-blue-500: color(display-p3 .266422 .491219 .988624);
       --color-purple-500: color(display-p3 .629519 .30089 .990817);
       --color-rose-400: color(display-p3 .942928 .430764 .503101);
-      --color-gray-100: color(display-p3 .953567 .956796 .964321);
       --color-gray-300: color(display-p3 .822033 .835264 .858521);
       --color-gray-500: color(display-p3 .421287 .446085 .504784);
       --color-gray-800: color(display-p3 .125854 .159497 .216835);
@@ -184,7 +181,6 @@
       --color-blue-500: lab(54.1736% 13.3369 -74.6839);
       --color-purple-500: lab(52.0183% 66.11 -78.2316);
       --color-rose-400: lab(64.4125% 63.0291 19.2068);
-      --color-gray-100: lab(96.1596% -.0823438 -1.13575);
       --color-gray-300: lab(85.1236% -.612259 -3.7138);
       --color-gray-500: lab(47.7841% -.393182 -10.0268);
       --color-gray-800: lab(16.1051% -1.18239 -11.7533);
@@ -541,10 +537,6 @@
 @layer components;
 
 @layer utilities {
-  .fixed {
-    position: fixed;
-  }
-
   .relative {
     position: relative;
   }
@@ -596,24 +588,12 @@
     margin-top: calc(var(--spacing) * 1);
   }
 
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
-  }
-
-  .mt-5 {
-    margin-top: calc(var(--spacing) * 5);
-  }
-
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
 
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
-  }
-
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
   }
 
   .mb-4 {
@@ -675,10 +655,6 @@
 
   .w-3 {
     width: calc(var(--spacing) * 3);
-  }
-
-  .w-12 {
-    width: calc(var(--spacing) * 12);
   }
 
   .w-\[90\%\] {
@@ -796,16 +772,8 @@
     border-color: var(--color-gray-300);
   }
 
-  .bg-black {
-    background-color: var(--color-black);
-  }
-
   .bg-blue-500 {
     background-color: var(--color-blue-500);
-  }
-
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
   }
 
   .bg-gray-500 {
@@ -958,10 +926,6 @@
 
   .text-blue-400 {
     color: var(--color-blue-400);
-  }
-
-  .text-blue-500 {
-    color: var(--color-blue-500);
   }
 
   .text-cyan-400 {
