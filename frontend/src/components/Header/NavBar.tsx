@@ -9,7 +9,7 @@ export default function NavBar() {
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex justify-between items-center h-10'>
 					<div className='flex items-center'>
-						<h1 className='text-2xl tracking-tight'>Газиев Али</h1>
+						<h1 className='text-2xl tracking-tight'>Али Газиев</h1>
 					</div>
 					<div className='flex items-center'></div>
 					<div className='flex items-center'>
