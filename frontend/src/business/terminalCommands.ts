@@ -1,22 +1,6 @@
 import { Command } from './terminalInterfaces'
 import { Terminal } from './terminalLogic'
 
-export const commands = [
-	'echo',
-	'help',
-	'clear',
-	'sum',
-	'minus',
-	'multi',
-	'division',
-	'pow',
-	'sqrt',
-	'random',
-	'date',
-	'reverse',
-	'system',
-]
-
 const validateNumbers = (
 	args: string[],
 	minCount: number = 1
@@ -192,3 +176,22 @@ export const systemCommand: Command = {
 Пользовательский агент: ${navigator.userAgent.substring(0, 50)}...
 Время: ${new Date().toLocaleString('ru-RU')}`.trim(),
 }
+
+export const commandMap = {
+	echo: echoCommand,
+	help: helpCommand,
+	clear: clearCommand,
+	sum: sumCommand,
+	minus: minusCommand,
+	multi: multiplicationCommand,
+	division: divisionCommand,
+	pow: powCommand,
+	sqrt: sqrtCommand,
+	random: randomCommand,
+	date: dateCommand,
+	reverse: reverseCommand,
+	system: systemCommand,
+} as const
+
+export const allCommands = Object.values(commandMap)
+export const commands = Object.keys(commandMap)

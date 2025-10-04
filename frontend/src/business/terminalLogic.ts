@@ -1,18 +1,4 @@
-import {
-	clearCommand,
-	dateCommand,
-	divisionCommand,
-	echoCommand,
-	helpCommand,
-	minusCommand,
-	multiplicationCommand,
-	powCommand,
-	randomCommand,
-	reverseCommand,
-	sqrtCommand,
-	sumCommand,
-	systemCommand,
-} from './terminalCommands'
+import { allCommands } from './terminalCommands'
 import { Command, CommandHistory } from './terminalInterfaces'
 
 export class Terminal {
@@ -72,18 +58,6 @@ export class Terminal {
 	}
 
 	public registerDefaultCommands() {
-		this.registerCommand(echoCommand)
-		this.registerCommand(helpCommand)
-		this.registerCommand(clearCommand)
-		this.registerCommand(sumCommand)
-		this.registerCommand(minusCommand)
-		this.registerCommand(multiplicationCommand)
-		this.registerCommand(divisionCommand)
-		this.registerCommand(powCommand)
-		this.registerCommand(sqrtCommand)
-		this.registerCommand(randomCommand)
-		this.registerCommand(dateCommand)
-		this.registerCommand(reverseCommand)
-		this.registerCommand(systemCommand)
+		allCommands.forEach(command => this.registerCommand(command))
 	}
 }
