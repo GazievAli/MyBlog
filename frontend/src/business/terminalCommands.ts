@@ -1,197 +1,194 @@
 import { Command } from './terminalInterfaces'
 import { Terminal } from './terminalLogic'
 
+export const commands = [
+	'echo',
+	'help',
+	'clear',
+	'sum',
+	'minus',
+	'multi',
+	'division',
+	'pow',
+	'sqrt',
+	'random',
+	'date',
+	'reverse',
+	'system',
+]
+
+const validateNumbers = (
+	args: string[],
+	minCount: number = 1
+): string | number[] => {
+	if (args.length < minCount) {
+		return `Ошибка: требуется минимум ${minCount} число(а)`
+	}
+
+	const numbers = args.map(Number)
+	if (numbers.some(isNaN)) {
+		return 'Ошибка: все аргументы должны быть числами'
+	}
+
+	return numbers
+}
+
+const executeWithValidation = (
+	args: string[],
+	operation: (numbers: number[]) => number,
+	minCount: number = 1
+): string => {
+	const validationResult = validateNumbers(args, minCount)
+	if (typeof validationResult === 'string') return validationResult
+
+	try {
+		return String(operation(validationResult))
+	} catch (error) {
+		return `Ошибка: ${
+			error instanceof Error ? error.message : 'неизвестная ошибка'
+		}`
+	}
+}
+
 export const echoCommand: Command = {
 	name: 'echo',
-	description: 'Prints back the input text',
-	execute: (args: string[]) => {
-		return args.join(' ') || 'No text provided'
-	},
+	description: 'Печатает введенный текст',
+	execute: (args: string[]) => args.join(' ') || 'Текст не предоставлен',
 }
 
 export const helpCommand: Command = {
 	name: 'help',
-	description: 'Shows all available commands',
+	description: 'Показывает все доступные команды',
 	execute: (args: string[], terminal: Terminal) => {
-		const commandList = []
+		const commands = Array.from(terminal.getCommands())
 
-		for (const [name, cmd] of terminal.getCommands()) {
-			commandList.push(`${name} - ${cmd.description}`)
-		}
-
-		return 'Доступные команды:\n' + commandList.join('\n')
+		return `Доступные команды:\n\n${commands
+			.map(([name, cmd]) => `${name.padEnd(12)} - ${cmd.description}`)
+			.join('\n')}\n\nИспользуйте: команда --help для подробной информации`
 	},
 }
 
 export const clearCommand: Command = {
 	name: 'clear',
-	description: 'Clears terminal history',
+	description: 'Очищает историю терминала',
 	execute: (args: string[], terminal: Terminal) => {
 		terminal.clearHistory()
-		return 'Terminal cleared'
+		terminal.clearUICallBack?.()
+		return ''
 	},
 }
 
 export const sumCommand: Command = {
 	name: 'sum',
-	description: 'sum numbers, for examle 4 3 5 -> 12',
-	execute: (args: string[], terminal: Terminal) => {
-		let sum = 0
-		for (let i = 0; i < args.length; i++) {
-			const num = Number(args[i])
-			if (isNaN(num)) {
-				return 'Error: all arguments must be numbers'
-			}
-			sum += num
-		}
-		return String(sum)
-	},
+	description: 'Сумма чисел, например: 4 3 5 -> 12.',
+	execute: (args: string[]) =>
+		executeWithValidation(args, numbers => numbers.reduce((a, b) => a + b, 0)),
 }
 
 export const minusCommand: Command = {
 	name: 'minus',
-	description: 'minus numbers, for example 20 4 5 -> 11',
-	execute: (args: string[], terminal: Terminal) => {
-		if (args.length === 0) {
-			return 'Error: at least one number is required'
-		}
-
-		let result = Number(args[0])
-		if (isNaN(result)) {
-			return 'error: all arguments must be numbers'
-		}
-
-		for (let i = 1; i < args.length; i++) {
-			const num = Number(args[i])
-			if (isNaN(num)) {
-				return 'Error: all arguments must be numbers'
-			}
-			result -= num
-		}
-
-		return String(result)
-	},
+	description: 'Вычитание чисел, например: 20 4 5 -> 11.',
+	execute: (args: string[]) =>
+		executeWithValidation(args, numbers => numbers.reduce((a, b) => a - b)),
 }
 
 export const multiplicationCommand: Command = {
-	name: 'multiplication',
-	description: 'multiplication numbers, for example 3 4 5 -> 60',
-	execute: (args: string[], terminal: Terminal) => {
-		if (args.length === 0) {
-			return 'Error: at least one number is required'
-		}
-
-		let result = Number(args[0])
-		if (isNaN(result)) {
-			return 'error: all arguments must be numbers'
-		}
-
-		for (let i = 1; i < args.length; i++) {
-			let num = Number(args[i])
-			if (isNaN(num)) {
-				return 'error: all arguments must be numbers'
-			}
-			result *= num
-		}
-
-		return String(result)
-	},
+	name: 'multi',
+	description: 'Умножение чисел, например: 3 4 5 -> 60.',
+	execute: (args: string[]) =>
+		executeWithValidation(args, numbers => numbers.reduce((a, b) => a * b, 1)),
 }
 
 export const divisionCommand: Command = {
 	name: 'division',
-	description: 'division numbers, for example 20 5 2 -> 2',
-	execute: (args: string[], terminal: Terminal) => {
-		if (args.length === 0) {
-			return 'Error: at least one number is required'
-		}
-
-		let result = Number(args[0])
-		if (isNaN(result)) {
-			return 'error: all arguments must be numbers'
-		}
-
-		for (let i = 1; i < args.length; i++) {
-			let num = Number(args[i])
-			if (isNaN(num)) {
-				return 'error: all arguments must be numbers'
+	description: 'Деление чисел, например: 20 5 2 -> 2',
+	execute: (args: string[]) =>
+		executeWithValidation(args, numbers => {
+			if (numbers.slice(1).some(n => n === 0)) {
+				throw new Error('деление на ноль')
 			}
-
-			if (num == 0) {
-				return 'Error: division by zero'
-			}
-
-			result /= num
-		}
-
-		return String(result)
-	},
+			return numbers.reduce((a, b) => a / b)
+		}),
 }
 
 export const powCommand: Command = {
 	name: 'pow',
-	description: '3 4 -> 81',
-	execute: (args: string[], terminal: Terminal) => {
-		if (args.length != 2) {
-			return 'Error: pow requires exactly 2 numbers (base and exponent)'
+	description: 'Возведение в степень, например: 3 4 -> 81',
+	execute: (args: string[]) => {
+		if (args.length !== 2) {
+			return 'Ошибка: команда требует ровно 2 числа (основание и показатель)'
 		}
 
-		const base = Number(args[0])
-		const exponent = Number(args[1])
+		const validationResult = validateNumbers(args, 2)
+		if (typeof validationResult === 'string') return validationResult
 
-		if (isNaN(base) || isNaN(exponent)) {
-			return 'Error: both arguments must be numbers'
-		}
-
-		const result = Math.pow(Number(args[0]), Number(args[1]))
-		return String(result)
+		const [base, exponent] = validationResult
+		return String(Math.pow(base, exponent))
 	},
 }
 
 export const sqrtCommand: Command = {
 	name: 'sqrt',
-	description: '25 -> 5',
-	execute: (args: string[], terminal: Terminal) => {
+	description: 'Вычисление квадратного корня, например: 25 -> 5.',
+	execute: (args: string[]) => {
 		if (args.length !== 1) {
-			return 'Error: sqrt requires exactly 1 number'
+			return 'Ошибка: команда требует ровно 1 число'
 		}
 
-		const num = Number(args[0])
+		const validationResult = validateNumbers(args, 1)
+		if (typeof validationResult === 'string') return validationResult
 
-		if (isNaN(num)) {
-			return 'Error: argument must be a number'
-		}
-
+		const [num] = validationResult
 		if (num < 0) {
-			return 'Error: cannot calculate square root of negative number'
+			return 'Ошибка: нельзя вычислить корень из отрицательного числа'
 		}
 
-		const result = Math.sqrt(num)
-		return String(result)
+		return String(Math.sqrt(num))
 	},
 }
 
 export const randomCommand: Command = {
 	name: 'random',
 	description:
-		'random int (start - end) - generates random number between start and end (inclusive)',
-	execute: (args: string[], terminal: Terminal) => {
+		'Генерирует случайное целое число между минимумом и максимумом (включительно)',
+	execute: (args: string[]) => {
 		if (args.length !== 2) {
-			return 'Error: random requires exactly 2 numbers (min and max)'
+			return 'Ошибка: команда требует ровно 2 числа (минимум и максимум)'
 		}
 
-		const min = Number(args[0])
-		const max = Number(args[1])
+		const validationResult = validateNumbers(args, 2)
+		if (typeof validationResult === 'string') return validationResult
 
-		if (isNaN(min) || isNaN(max)) {
-			return 'Error: both arguments must be numbers'
-		}
-
+		const [min, max] = validationResult
 		if (min > max) {
-			return 'Error: min cannot be greater than max'
+			return 'Ошибка: минимум не может быть больше максимума'
 		}
 
-		const result = Math.floor(Math.random() * (max - min + 1)) + min
-		return String(result)
+		return String(Math.floor(Math.random() * (max - min + 1)) + min)
 	},
+}
+
+export const dateCommand: Command = {
+	name: 'date',
+	description: 'Показывает текущую дату и время',
+	execute: () => new Date().toLocaleString('ru-RU'),
+}
+
+export const reverseCommand: Command = {
+	name: 'reverse',
+	description: 'Инвертирует вводимый текст',
+	execute: (args: string[]) =>
+		args.length
+			? args.join(' ').split('').reverse().join('')
+			: 'Ошибка: требуется текст для обращения',
+}
+
+export const systemCommand: Command = {
+	name: 'system',
+	description: 'Показывает информацию о системе',
+	execute: () =>
+		`Платформа: ${navigator.platform}
+Язык: ${navigator.language}
+Пользовательский агент: ${navigator.userAgent.substring(0, 50)}...
+Время: ${new Date().toLocaleString('ru-RU')}`.trim(),
 }

@@ -1,5 +1,6 @@
 import {
 	clearCommand,
+	dateCommand,
 	divisionCommand,
 	echoCommand,
 	helpCommand,
@@ -7,8 +8,10 @@ import {
 	multiplicationCommand,
 	powCommand,
 	randomCommand,
+	reverseCommand,
 	sqrtCommand,
 	sumCommand,
+	systemCommand,
 } from './terminalCommands'
 import { Command, CommandHistory } from './terminalInterfaces'
 
@@ -16,6 +19,7 @@ export class Terminal {
 	private terminalName: string
 	private commands: Map<string, Command> = new Map()
 	private history: CommandHistory[] = []
+	public clearUICallBack?: () => void
 
 	constructor(name: string) {
 		this.terminalName = name
@@ -58,6 +62,10 @@ export class Terminal {
 		this.history = []
 	}
 
+	public setClearUICallBack(callback: () => void) {
+		this.clearUICallBack = callback
+	}
+
 	public registerCommand(command: Command) {
 		this.commands.set(command.name, command)
 		console.log(`Command "${command.name}" registered successfully`)
@@ -74,5 +82,8 @@ export class Terminal {
 		this.registerCommand(powCommand)
 		this.registerCommand(sqrtCommand)
 		this.registerCommand(randomCommand)
+		this.registerCommand(dateCommand)
+		this.registerCommand(reverseCommand)
+		this.registerCommand(systemCommand)
 	}
 }

@@ -3,9 +3,14 @@ import { ReactNode } from 'react'
 interface ButtonRoundedProps {
 	children?: ReactNode
 	color: 'red' | 'blue' | 'green' | 'yellow' | 'gray'
+	buttonClicked?: () => void
 }
 
-export default function ButtonRound({ children, color }: ButtonRoundedProps) {
+export default function ButtonRound({
+	children,
+	color,
+	buttonClicked,
+}: ButtonRoundedProps) {
 	const colorClasses = {
 		red: 'bg-red-500',
 		blue: 'bg-blue-500',
@@ -17,6 +22,7 @@ export default function ButtonRound({ children, color }: ButtonRoundedProps) {
 	return (
 		<button
 			className={`w-3 h-3 rounded-full cursor-pointer ${colorClasses[color]}`}
+			onClick={buttonClicked}
 		>
 			{children}
 		</button>
