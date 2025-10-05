@@ -69,7 +69,6 @@ export default function Body({ name, isFullScreen = false }: BodyProps) {
 	return (
 		<div
 			className={`flex-1 p-4 font-mono text-[#abb2bf] overflow-y-auto cursor-text
-				/* Кастомная полоса прокрутки */
 				[&::-webkit-scrollbar]:w-2
 				[&::-webkit-scrollbar-track]:bg-[#282c34]
 				[&::-webkit-scrollbar-thumb]:bg-[#3e4451]
