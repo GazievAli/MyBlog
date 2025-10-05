@@ -1,7 +1,7 @@
+import { Command, CommandHistory, ITerminal } from '@/types/terminalLogic'
 import { allCommands } from './TerminalCommands'
-import { Command, CommandHistory } from './TerminalInterfaces'
 
-export class Terminal {
+export class Terminal implements ITerminal {
 	private terminalName: string
 	private commands: Map<string, Command> = new Map()
 	private history: CommandHistory[] = []
@@ -13,11 +13,11 @@ export class Terminal {
 		this.registerDefaultCommands()
 	}
 
-	public getName() {
+	public getName(): string {
 		return this.terminalName
 	}
 
-	public getCommands() {
+	public getCommands(): Map<string, Command> {
 		return this.commands
 	}
 
@@ -44,20 +44,20 @@ export class Terminal {
 		return output
 	}
 
-	public clearHistory() {
+	public clearHistory(): void {
 		this.history = []
 	}
 
-	public setClearUICallBack(callback: () => void) {
+	public setClearUICallBack(callback: () => void): void {
 		this.clearUICallBack = callback
 	}
 
-	public registerCommand(command: Command) {
+	public registerCommand(command: Command): void {
 		this.commands.set(command.name, command)
 		console.log(`Command "${command.name}" registered successfully`)
 	}
 
-	public registerDefaultCommands() {
+	public registerDefaultCommands(): void {
 		allCommands.forEach(command => this.registerCommand(command))
 	}
 }

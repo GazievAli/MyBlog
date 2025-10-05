@@ -1,17 +1,13 @@
-import { highlightSyntax } from './TerminalHighlight'
+'use client'
 
-interface TerminalInputProps {
-	name: string
-	safeLine: string
-}
+import { TerminalInputProps } from '@/types/terminal'
+import { highlightSyntax } from './TerminalHighlight'
+import LineTerminalPattern from './TerminalLinePattern'
 
 export default function TerminalInput({ name, safeLine }: TerminalInputProps) {
 	return (
 		<div className='flex items-center'>
-			<span className='text-[#61afef]'>{name}@terminal</span>
-			<span className='text-[#abb2bf]'>:</span>
-			<span className='text-[#56b6c2]'>~</span>
-			<span className='text-[#abb2bf]'>$</span>
+			<LineTerminalPattern name={name} />
 			<span className='ml-2 text-white'>
 				{highlightSyntax(safeLine.substring(2))}
 			</span>

@@ -14,7 +14,7 @@ export const highlightSyntax = (text: string) => {
 
 		if (/^\d+$/.test(token)) {
 			return (
-				<span key={index} className='text-[#d19a66]'>
+				<span key={index} className='text-[#d19a66] font-medium'>
 					{token}
 				</span>
 			)
@@ -22,16 +22,16 @@ export const highlightSyntax = (text: string) => {
 
 		if (commands.includes(token)) {
 			return (
-				<span key={index} className='text-[#98c379]'>
+				<span key={index} className='text-[#98c379] font-bold'>
 					{token}
 				</span>
 			)
 		}
 
-		const operators = ['+', '-', '*', '/']
+		const operators = ['+', '-', '*', '/', '=']
 		if (operators.includes(token)) {
 			return (
-				<span key={index} className='text-[#e06c75]'>
+				<span key={index} className='text-[#e06c75] font-bold'>
 					{token}
 				</span>
 			)
@@ -39,7 +39,15 @@ export const highlightSyntax = (text: string) => {
 
 		if (token.startsWith('-')) {
 			return (
-				<span key={index} className='text-[#c678dd]'>
+				<span key={index} className='text-[#c678dd] font-medium'>
+					{token}
+				</span>
+			)
+		}
+
+		if (token.startsWith('"') && token.endsWith('"')) {
+			return (
+				<span key={index} className='text-[#56b6c2]'>
 					{token}
 				</span>
 			)

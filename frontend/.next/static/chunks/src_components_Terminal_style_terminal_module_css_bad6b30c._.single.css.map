@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/Terminal/style/terminal.module.css"],"sourcesContent":[".terminal {\n\twidth: 100%;\n\tmin-height: 100vh;\n\tbackground: linear-gradient(135deg, #000000, #111827, #000000);\n\tposition: relative;\n\toverflow: hidden;\n}\n\n.float1 {\n\tanimation: float-1 15s ease-in-out infinite;\n}\n\n.float2 {\n\tanimation: float-2 20s ease-in-out infinite 5s;\n}\n\n.float3 {\n\tanimation: float-3 18s ease-in-out infinite 3s;\n}\n\n@keyframes float-1 {\n\t0%,\n\t100% {\n\t\ttransform: translate(0px, 0px) scale(1);\n\t}\n\t50% {\n\t\ttransform: translate(-20px, -30px) scale(1.1);\n\t}\n}\n\n@keyframes float-2 {\n\t0%,\n\t100% {\n\t\ttransform: translate(0px, 0px) scale(1);\n\t}\n\t50% {\n\t\ttransform: translate(30px, -20px) scale(1.05);\n\t}\n}\n\n@keyframes float-3 {\n\t0%,\n\t100% {\n\t\ttransform: translate(0px, 0px) scale(1);\n\t}\n\t50% {\n\t\ttransform: translate(-15px, 25px) scale(1.08);\n\t}\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;AAIA;;;;AAIA;;;;AAIA;;;;;;;;;;AAUA;;;;;;;;;;AAUA"}}]
+}

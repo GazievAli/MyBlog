@@ -1,0 +1,49 @@
+.terminal {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #000000, #111827, #000000);
+	position: relative;
+	overflow: hidden;
+}
+
+.float1 {
+	animation: float-1 15s ease-in-out infinite;
+}
+
+.float2 {
+	animation: float-2 20s ease-in-out infinite 5s;
+}
+
+.float3 {
+	animation: float-3 18s ease-in-out infinite 3s;
+}
+
+@keyframes float-1 {
+	0%,
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	50% {
+		transform: translate(-20px, -30px) scale(1.1);
+	}
+}
+
+@keyframes float-2 {
+	0%,
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	50% {
+		transform: translate(30px, -20px) scale(1.05);
+	}
+}
+
+@keyframes float-3 {
+	0%,
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	50% {
+		transform: translate(-15px, 25px) scale(1.08);
+	}
+}

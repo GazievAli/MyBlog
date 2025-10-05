@@ -1,16 +1,16 @@
-interface TerminalOcoProps {
-	hideTerminal: () => void
-}
+'use client'
 
-export default function TerminalIco({ hideTerminal }: TerminalOcoProps) {
+import { TerminalIcoProps } from '@/types/terminal'
+
+export default function TerminalIco({ hideTerminal }: TerminalIcoProps) {
 	return (
 		<div className='fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50'>
 			<button
-				className='w-12 h-12 sm:w-14 sm:h-14 bg-gray-900 rounded-full sm:rounded-2xl shadow-2xl border border-gray-700 flex items-center justify-center hover:bg-gray-800 active:scale-95 transition-all duration-200 group'
+				className='w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full sm:rounded-2xl shadow-2xl border border-gray-600 flex items-center justify-center hover:from-gray-700 hover:to-gray-800 active:scale-95 transition-all duration-200 group backdrop-blur-sm'
 				onClick={hideTerminal}
 			>
 				<svg
-					className='w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-gray-300'
+					className='w-5 h-5 sm:w-6 sm:h-6 text-gray-300 group-hover:text-white transition-colors'
 					fill='none'
 					stroke='currentColor'
 					viewBox='0 0 24 24'

@@ -1,0 +1,52 @@
+/* [project]/src/components/Terminal/style/terminal.module.css [app-client] (css) */
+.terminal-module__fjpNAW__terminal {
+  background: linear-gradient(135deg, #000, #111827, #000);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-module__fjpNAW__float1 {
+  animation: 15s ease-in-out infinite terminal-module__fjpNAW__float-1;
+}
+
+.terminal-module__fjpNAW__float2 {
+  animation: 20s ease-in-out 5s infinite terminal-module__fjpNAW__float-2;
+}
+
+.terminal-module__fjpNAW__float3 {
+  animation: 18s ease-in-out 3s infinite terminal-module__fjpNAW__float-3;
+}
+
+@keyframes terminal-module__fjpNAW__float-1 {
+  0%, 100% {
+    transform: translate(0)scale(1);
+  }
+
+  50% {
+    transform: translate(-20px, -30px)scale(1.1);
+  }
+}
+
+@keyframes terminal-module__fjpNAW__float-2 {
+  0%, 100% {
+    transform: translate(0)scale(1);
+  }
+
+  50% {
+    transform: translate(30px, -20px)scale(1.05);
+  }
+}
+
+@keyframes terminal-module__fjpNAW__float-3 {
+  0%, 100% {
+    transform: translate(0)scale(1);
+  }
+
+  50% {
+    transform: translate(-15px, 25px)scale(1.08);
+  }
+}
+
+/*# sourceMappingURL=src_components_Terminal_style_terminal_module_css_bad6b30c._.single.css.map*/

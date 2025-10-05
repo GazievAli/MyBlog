@@ -1,0 +1,67 @@
+/* [project]/src/components/Header/styles/header.module.css [app-client] (css) */
+.header-module__FnZKEq__main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-module__FnZKEq__floatSlow {
+  animation: 8s ease-in-out infinite header-module__FnZKEq__float-slow;
+}
+
+.header-module__FnZKEq__floatDelayed {
+  animation: 10s ease-in-out 2s infinite header-module__FnZKEq__float-delayed;
+}
+
+.header-module__FnZKEq__pulseSlow {
+  animation: 6s ease-in-out infinite header-module__FnZKEq__pulse-slow;
+}
+
+.header-module__FnZKEq__shimmerSlow {
+  animation: 8s ease-in-out infinite header-module__FnZKEq__shimmer-slow;
+}
+
+@keyframes header-module__FnZKEq__float-slow {
+  0%, 100% {
+    transform: translateY(0)scale(1);
+  }
+
+  50% {
+    transform: translateY(-10px)scale(1.05);
+  }
+}
+
+@keyframes header-module__FnZKEq__float-delayed {
+  0%, 100% {
+    transform: translateY(0)scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px)scale(1.03);
+  }
+}
+
+@keyframes header-module__FnZKEq__pulse-slow {
+  0%, 100% {
+    opacity: .1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .15;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes header-module__FnZKEq__shimmer-slow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/*# sourceMappingURL=src_components_Header_styles_header_module_css_bad6b30c._.single.css.map*/

@@ -1,16 +1,11 @@
 'use client'
 
 import { Terminal } from '@/business/TerminalLogic'
+import { BodyProps } from '@/types/terminal'
 import { useEffect, useRef, useState } from 'react'
-
 import TerminalInput from './TerminalInput'
 import Line from './TerminalLine'
 import TerminalOutput from './TerminalOutput'
-
-interface BodyProps {
-	name: string
-	isFullScreen?: boolean
-}
 
 export default function Body({ name, isFullScreen = false }: BodyProps) {
 	const [input, setInput] = useState('')
@@ -32,7 +27,6 @@ export default function Body({ name, isFullScreen = false }: BodyProps) {
 
 		if (command.trim() !== 'clear') {
 			const resultLines = result.split('\n')
-
 			setOutput(prev => [
 				...prev,
 				`$ ${command}`,
@@ -41,6 +35,7 @@ export default function Body({ name, isFullScreen = false }: BodyProps) {
 		} else {
 			await terminalRef.current.execute(command)
 		}
+
 		setInput('')
 	}
 
@@ -56,10 +51,6 @@ export default function Body({ name, isFullScreen = false }: BodyProps) {
 		}
 	}
 
-	const handleTerminalClick = () => {
-		focusInput()
-	}
-
 	useEffect(() => {
 		if (bodyRef.current) {
 			bodyRef.current.scrollTop = bodyRef.current.scrollHeight
@@ -68,23 +59,21 @@ export default function Body({ name, isFullScreen = false }: BodyProps) {
 
 	return (
 		<div
-			className={`flex-1 p-4 font-mono text-[#abb2bf] overflow-y-auto cursor-text
-				[&::-webkit-scrollbar]:w-2
-				[&::-webkit-scrollbar-track]:bg-[#282c34]
-				[&::-webkit-scrollbar-thumb]:bg-[#3e4451]
-				[&::-webkit-scrollbar-thumb]:rounded-full
-				[&::-webkit-scrollbar-thumb]:hover:bg-[#545862]
-				${isFullScreen ? 'min-h-0' : ''}`}
+			className={`flex-1 p-4 md:p-6 font-mono text-[#abb2bf] overflow-y-auto cursor-text bg-transparent
+        [&::-webkit-scrollbar]:w-2
+        [&::-webkit-scrollbar-track]:bg-transparent
+        [&::-webkit-scrollbar-thumb]:bg-gray-600/30
+        [&::-webkit-scrollbar-thumb]:rounded-full
+        [&::-webkit-scrollbar-thumb]:hover:bg-gray-500/40
+        ${isFullScreen ? 'min-h-0' : ''}`}
 			ref={bodyRef}
-			onClick={handleTerminalClick}
-			style={{ overflowY: 'auto' }}
+			onClick={focusInput}
 		>
-			<div className='min-h-full'>
+			<div className='min-h-full space-y-1'>
 				{output.map((line, index) => {
 					const safeLine = line || ''
-
 					return (
-						<div key={index} className='mb-1'>
+						<div key={index} className='mb-0.5'>
 							{safeLine.startsWith('$ ') ? (
 								<TerminalInput safeLine={safeLine} name={name} />
 							) : (

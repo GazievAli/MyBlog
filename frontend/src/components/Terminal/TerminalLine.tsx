@@ -1,12 +1,8 @@
-import { highlightSyntax } from './TerminalHighlight'
+'use client'
 
-interface LineProps {
-	input: string
-	onInputChange: (value: string) => void
-	onKeyPress: (e: React.KeyboardEvent) => void
-	name: string
-	inputRef: React.RefObject<HTMLInputElement | null>
-}
+import { LineProps } from '@/types/terminal'
+import { highlightSyntax } from './TerminalHighlight'
+import LineTerminalPattern from './TerminalLinePattern'
 
 export default function Line({
 	input,
@@ -17,15 +13,12 @@ export default function Line({
 }: LineProps) {
 	return (
 		<div className='flex items-center'>
-			<span className='text-[#61afef]'>{name}@terminal</span>
-			<span className='text-[#abb2bf]'>:</span>
-			<span className='text-[#56b6c2]'>~</span>
-			<span className='text-[#abb2bf]'>$</span>
+			<LineTerminalPattern name={name} />
 
 			<div className='ml-2 flex-1 relative'>
 				<div className='absolute inset-0 font-mono pointer-events-none'>
 					{highlightSyntax(input)}
-					<span className='ml-1 text-[#e5c07b] animate-pulse'>_</span>
+					<span className='ml-0.5 text-[#e5c07b] animate-pulse'>_</span>
 				</div>
 
 				<input

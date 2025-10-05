@@ -1,11 +1,7 @@
-import ButtonRound from '../UI/buttons/ButtonRounded'
+'use client'
 
-interface NavBarProps {
-	hiddenTerminal: () => void
-	fullTerminal: () => void
-	windowName: string
-	isFullScreen: boolean
-}
+import { NavBarProps } from '@/types/terminal'
+import ButtonRound from '../UI/buttons/ButtonRounded'
 
 export default function NavBar({
 	hiddenTerminal,
@@ -14,21 +10,18 @@ export default function NavBar({
 	isFullScreen,
 }: NavBarProps) {
 	return (
-		<div className='flex items-center justify-between px-4 py-3 bg-[#21252b] border-b border-gray-700'>
+		<div className='flex items-center justify-between px-4 py-3 bg-black/30 backdrop-blur-md border-b border-gray-700/30'>
 			<div className='flex-1 flex justify-center'>
-				<div className='text-[#abb2bf] text-sm font-medium'>{windowName}</div>
+				<div className='text-[#8b949e] text-sm font-medium tracking-wide'>
+					{windowName}
+				</div>
 			</div>
 			<div className='flex space-x-2'>
-				<ButtonRound color='red' buttonClicked={hiddenTerminal}></ButtonRound>
-
-				{isFullScreen ? (
-					<ButtonRound
-						color='yellow'
-						buttonClicked={fullTerminal}
-					></ButtonRound>
-				) : (
-					<ButtonRound color='green' buttonClicked={fullTerminal}></ButtonRound>
-				)}
+				<ButtonRound color='red' buttonClicked={hiddenTerminal} />
+				<ButtonRound
+					color={isFullScreen ? 'yellow' : 'green'}
+					buttonClicked={fullTerminal}
+				/>
 			</div>
 		</div>
 	)

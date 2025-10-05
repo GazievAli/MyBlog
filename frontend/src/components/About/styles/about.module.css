@@ -1,0 +1,48 @@
+.about {
+	position: relative;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #f9fafb, #ffffff);
+	overflow: hidden;
+}
+
+.float {
+	animation: float 8s ease-in-out infinite;
+}
+
+.floatDelayed {
+	animation: float-delayed 10s ease-in-out infinite 2s;
+}
+
+.floatSlow {
+	animation: float-slow 12s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) scale(1);
+	}
+	50% {
+		transform: translateY(-20px) scale(1.1);
+	}
+}
+
+@keyframes float-delayed {
+	0%,
+	100% {
+		transform: translateY(0px) scale(1);
+	}
+	50% {
+		transform: translateY(-15px) scale(1.05);
+	}
+}
+
+@keyframes float-slow {
+	0%,
+	100% {
+		transform: translateY(0px) scale(1);
+	}
+	50% {
+		transform: translateY(-10px) scale(1.02);
+	}
+}

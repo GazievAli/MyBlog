@@ -1,0 +1,51 @@
+/* [project]/src/components/About/styles/about.module.css [app-client] (css) */
+.about-module__wggbcW__about {
+  background: linear-gradient(135deg, #f9fafb, #fff);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-module__wggbcW__float {
+  animation: 8s ease-in-out infinite about-module__wggbcW__float;
+}
+
+.about-module__wggbcW__floatDelayed {
+  animation: 10s ease-in-out 2s infinite about-module__wggbcW__float-delayed;
+}
+
+.about-module__wggbcW__floatSlow {
+  animation: 12s ease-in-out 1s infinite about-module__wggbcW__float-slow;
+}
+
+@keyframes about-module__wggbcW__float {
+  0%, 100% {
+    transform: translateY(0)scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px)scale(1.1);
+  }
+}
+
+@keyframes about-module__wggbcW__float-delayed {
+  0%, 100% {
+    transform: translateY(0)scale(1);
+  }
+
+  50% {
+    transform: translateY(-15px)scale(1.05);
+  }
+}
+
+@keyframes about-module__wggbcW__float-slow {
+  0%, 100% {
+    transform: translateY(0)scale(1);
+  }
+
+  50% {
+    transform: translateY(-10px)scale(1.02);
+  }
+}
+
+/*# sourceMappingURL=src_components_About_styles_about_module_css_bad6b30c._.single.css.map*/

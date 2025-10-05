@@ -1,5 +1,12 @@
-import { Command } from './TerminalInterfaces'
-import { Terminal } from './TerminalLogic'
+import {
+	Command,
+	CommandMap,
+	ITerminal,
+	MathCommand,
+	SystemCommand,
+	TerminalCommand,
+	TextCommand,
+} from '@/types/terminalLogic'
 
 const validateNumbers = (
 	args: string[],
@@ -34,16 +41,21 @@ const executeWithValidation = (
 	}
 }
 
-export const echoCommand: Command = {
+export const echoCommand: TextCommand = {
 	name: 'echo',
 	description: 'Печатает введенный текст',
-	execute: (args: string[]) => args.join(' ') || 'Текст не предоставлен',
+	execute: (args: string[]): string =>
+		args.join(' ') || 'Текст не предоставлен',
 }
 
-export const helpCommand: Command = {
+export const helpCommand: TerminalCommand = {
 	name: 'help',
 	description: 'Показывает все доступные команды',
-	execute: (args: string[], terminal: Terminal) => {
+	execute: (args: string[], terminal?: ITerminal): string => {
+		if (!terminal) {
+			return 'Ошибка: терминал не инициализирован'
+		}
+
 		const commands = Array.from(terminal.getCommands())
 
 		return `Доступные команды:\n\n${commands
@@ -52,41 +64,47 @@ export const helpCommand: Command = {
 	},
 }
 
-export const clearCommand: Command = {
+export const clearCommand: TerminalCommand = {
 	name: 'clear',
 	description: 'Очищает историю терминала',
-	execute: (args: string[], terminal: Terminal) => {
+	execute: (args: string[], terminal?: ITerminal): string => {
+		if (!terminal) {
+			return 'Ошибка: терминал не инициализирован'
+		}
+
 		terminal.clearHistory()
-		terminal.clearUICallBack?.()
+		if (terminal.clearUICallBack) {
+			terminal.clearUICallBack()
+		}
 		return ''
 	},
 }
 
-export const sumCommand: Command = {
+export const sumCommand: MathCommand = {
 	name: 'sum',
 	description: 'Сумма чисел, например: 4 3 5 -> 12.',
-	execute: (args: string[]) =>
+	execute: (args: string[]): string =>
 		executeWithValidation(args, numbers => numbers.reduce((a, b) => a + b, 0)),
 }
 
-export const minusCommand: Command = {
+export const minusCommand: MathCommand = {
 	name: 'minus',
 	description: 'Вычитание чисел, например: 20 4 5 -> 11.',
-	execute: (args: string[]) =>
+	execute: (args: string[]): string =>
 		executeWithValidation(args, numbers => numbers.reduce((a, b) => a - b)),
 }
 
-export const multiplicationCommand: Command = {
+export const multiplicationCommand: MathCommand = {
 	name: 'multi',
 	description: 'Умножение чисел, например: 3 4 5 -> 60.',
-	execute: (args: string[]) =>
+	execute: (args: string[]): string =>
 		executeWithValidation(args, numbers => numbers.reduce((a, b) => a * b, 1)),
 }
 
-export const divisionCommand: Command = {
+export const divisionCommand: MathCommand = {
 	name: 'division',
 	description: 'Деление чисел, например: 20 5 2 -> 2',
-	execute: (args: string[]) =>
+	execute: (args: string[]): string =>
 		executeWithValidation(args, numbers => {
 			if (numbers.slice(1).some(n => n === 0)) {
 				throw new Error('деление на ноль')
@@ -95,10 +113,10 @@ export const divisionCommand: Command = {
 		}),
 }
 
-export const powCommand: Command = {
+export const powCommand: MathCommand = {
 	name: 'pow',
 	description: 'Возведение в степень, например: 3 4 -> 81',
-	execute: (args: string[]) => {
+	execute: (args: string[]): string => {
 		if (args.length !== 2) {
 			return 'Ошибка: команда требует ровно 2 числа (основание и показатель)'
 		}
@@ -111,10 +129,10 @@ export const powCommand: Command = {
 	},
 }
 
-export const sqrtCommand: Command = {
+export const sqrtCommand: MathCommand = {
 	name: 'sqrt',
 	description: 'Вычисление квадратного корня, например: 25 -> 5.',
-	execute: (args: string[]) => {
+	execute: (args: string[]): string => {
 		if (args.length !== 1) {
 			return 'Ошибка: команда требует ровно 1 число'
 		}
@@ -131,11 +149,11 @@ export const sqrtCommand: Command = {
 	},
 }
 
-export const randomCommand: Command = {
+export const randomCommand: MathCommand = {
 	name: 'random',
 	description:
 		'Генерирует случайное целое число между минимумом и максимумом (включительно)',
-	execute: (args: string[]) => {
+	execute: (args: string[]): string => {
 		if (args.length !== 2) {
 			return 'Ошибка: команда требует ровно 2 числа (минимум и максимум)'
 		}
@@ -152,32 +170,39 @@ export const randomCommand: Command = {
 	},
 }
 
-export const dateCommand: Command = {
+export const dateCommand: SystemCommand = {
 	name: 'date',
 	description: 'Показывает текущую дату и время',
-	execute: () => new Date().toLocaleString('ru-RU'),
+	execute: (args: string[]): string => new Date().toLocaleString('ru-RU'),
 }
 
-export const reverseCommand: Command = {
+export const reverseCommand: TextCommand = {
 	name: 'reverse',
 	description: 'Инвертирует вводимый текст',
-	execute: (args: string[]) =>
+	execute: (args: string[]): string =>
 		args.length
 			? args.join(' ').split('').reverse().join('')
 			: 'Ошибка: требуется текст для обращения',
 }
 
-export const systemCommand: Command = {
+export const systemCommand: SystemCommand = {
 	name: 'system',
 	description: 'Показывает информацию о системе',
-	execute: () =>
-		`Платформа: ${navigator.platform}
+	execute: (args: string[]): string => {
+		// Используем современные API вместо deprecated platform
+		const userAgentData = (navigator as any).userAgentData
+		const platformInfo = userAgentData
+			? `${userAgentData.platform} (${userAgentData.manufacturer || 'Unknown'})`
+			: 'Unknown Platform'
+
+		return `Платформа: ${platformInfo}
 Язык: ${navigator.language}
-Пользовательский агент: ${navigator.userAgent.substring(0, 50)}...
-Время: ${new Date().toLocaleString('ru-RU')}`.trim(),
+Онлайн: ${navigator.onLine ? 'Да' : 'Нет'}
+Время: ${new Date().toLocaleString('ru-RU')}`.trim()
+	},
 }
 
-export const commandMap = {
+export const commandMap: CommandMap = {
 	echo: echoCommand,
 	help: helpCommand,
 	clear: clearCommand,
@@ -193,5 +218,5 @@ export const commandMap = {
 	system: systemCommand,
 } as const
 
-export const allCommands = Object.values(commandMap)
-export const commands = Object.keys(commandMap)
+export const allCommands: Command[] = Object.values(commandMap)
+export const commands: string[] = Object.keys(commandMap)
