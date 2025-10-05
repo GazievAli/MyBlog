@@ -1,6 +1,6 @@
 'use client'
 
-import { commands } from '@/business/terminalCommands'
+import { commands } from '@/business/TerminalCommands'
 
 export const highlightSyntax = (text: string) => {
 	if (!text) return text

@@ -1,4 +1,4 @@
-import { Terminal } from './terminalLogic'
+import { Terminal } from './TerminalLogic'
 
 export interface Command {
 	name: string

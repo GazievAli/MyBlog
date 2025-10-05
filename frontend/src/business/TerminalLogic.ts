@@ -1,5 +1,5 @@
-import { allCommands } from './terminalCommands'
-import { Command, CommandHistory } from './terminalInterfaces'
+import { allCommands } from './TerminalCommands'
+import { Command, CommandHistory } from './TerminalInterfaces'
 
 export class Terminal {
 	private terminalName: string

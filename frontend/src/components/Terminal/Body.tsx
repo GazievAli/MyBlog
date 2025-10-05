@@ -1,6 +1,6 @@
 'use client'
 
-import { Terminal } from '@/business/terminalLogic'
+import { Terminal } from '@/business/TerminalLogic'
 import { useEffect, useRef, useState } from 'react'
 import Line from './Line'
 import { highlightSyntax } from './TerminalHighlight'

@@ -1,5 +1,5 @@
-import { Command } from './terminalInterfaces'
-import { Terminal } from './terminalLogic'
+import { Command } from './TerminalInterfaces'
+import { Terminal } from './TerminalLogic'
 
 const validateNumbers = (
 	args: string[],
