@@ -1,0 +1,250 @@
+/* Основные анимации для Header */
+.floatSlow {
+	animation: float-slow 12s ease-in-out infinite;
+}
+
+.floatDelayed {
+	animation: float-delayed 15s ease-in-out infinite 3s;
+}
+
+.floatReverse {
+	animation: float-reverse 18s ease-in-out infinite 2s;
+}
+
+.pulseSlow {
+	animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.pulseFast {
+	animation: pulse-fast 4s ease-in-out infinite 1s;
+}
+
+.glowPulse {
+	animation: glow-pulse 6s ease-in-out infinite;
+}
+
+.orbit {
+	animation: orbit 25s linear infinite;
+}
+
+.orbitReverse {
+	animation: orbit-reverse 30s linear infinite 5s;
+}
+
+.twinkle {
+	animation: twinkle 3s ease-in-out infinite;
+}
+
+.drift {
+	animation: drift 20s ease-in-out infinite;
+}
+
+/* Упрощенные анимации для мобильных */
+.mobileFloat {
+	animation: mobile-float 20s ease-in-out infinite;
+}
+
+.mobilePulse {
+	animation: mobile-pulse 10s ease-in-out infinite;
+}
+
+.mobileTwinkle {
+	animation: mobile-twinkle 4s ease-in-out infinite;
+}
+
+/* Ключевые кадры анимаций для десктопов */
+@keyframes float-slow {
+	0%,
+	100% {
+		transform: translate(0px, 0px) scale(1) rotate(0deg);
+	}
+	25% {
+		transform: translate(-20px, -15px) scale(1.1) rotate(90deg);
+	}
+	50% {
+		transform: translate(15px, -25px) scale(1.05) rotate(180deg);
+	}
+	75% {
+		transform: translate(-10px, 10px) scale(1.15) rotate(270deg);
+	}
+}
+
+@keyframes float-delayed {
+	0%,
+	100% {
+		transform: translate(0px, 0px) scale(1) rotate(0deg);
+	}
+	33% {
+		transform: translate(25px, -18px) scale(1.2) rotate(120deg);
+	}
+	66% {
+		transform: translate(-18px, 22px) scale(1.1) rotate(240deg);
+	}
+}
+
+@keyframes float-reverse {
+	0%,
+	100% {
+		transform: translate(0px, 0px) scale(1) rotate(0deg);
+	}
+	25% {
+		transform: translate(30px, 10px) scale(1.08) rotate(-90deg);
+	}
+	50% {
+		transform: translate(-15px, -30px) scale(1.12) rotate(-180deg);
+	}
+	75% {
+		transform: translate(20px, 15px) scale(1.06) rotate(-270deg);
+	}
+}
+
+@keyframes pulse-slow {
+	0%,
+	100% {
+		opacity: 0.1;
+		transform: scale(1);
+		filter: blur(40px);
+	}
+	50% {
+		opacity: 0.2;
+		transform: scale(1.3);
+		filter: blur(50px);
+	}
+}
+
+@keyframes pulse-fast {
+	0%,
+	100% {
+		opacity: 0.05;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.15;
+		transform: scale(1.4);
+	}
+}
+
+@keyframes glow-pulse {
+	0%,
+	100% {
+		box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+	}
+	50% {
+		box-shadow: 0 0 60px rgba(139, 92, 246, 0.5),
+			0 0 100px rgba(59, 130, 246, 0.3);
+	}
+}
+
+@keyframes orbit {
+	0% {
+		transform: rotate(0deg) translateX(100px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg) translateX(100px) rotate(-360deg);
+	}
+}
+
+@keyframes orbit-reverse {
+	0% {
+		transform: rotate(0deg) translateX(150px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg) translateX(150px) rotate(360deg);
+	}
+}
+
+@keyframes twinkle {
+	0%,
+	100% {
+		opacity: 0.3;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.5);
+	}
+}
+
+@keyframes drift {
+	0%,
+	100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	25% {
+		transform: translate(30px, -20px) rotate(90deg);
+	}
+	50% {
+		transform: translate(-20px, 40px) rotate(180deg);
+	}
+	75% {
+		transform: translate(25px, 15px) rotate(270deg);
+	}
+}
+
+/* Упрощенные анимации для мобильных */
+@keyframes mobile-float {
+	0%,
+	100% {
+		transform: translateY(0px) scale(1);
+	}
+	50% {
+		transform: translateY(-10px) scale(1.1);
+	}
+}
+
+@keyframes mobile-pulse {
+	0%,
+	100% {
+		opacity: 0.08;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.15;
+		transform: scale(1.2);
+	}
+}
+
+@keyframes mobile-twinkle {
+	0%,
+	100% {
+		opacity: 0.2;
+	}
+	50% {
+		opacity: 0.6;
+	}
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+	.floatSlow,
+	.floatDelayed,
+	.floatReverse,
+	.orbit,
+	.orbitReverse,
+	.drift {
+		animation: none;
+	}
+
+	.pulseSlow,
+	.pulseFast {
+		animation-name: mobile-pulse;
+		animation-duration: 15s;
+	}
+
+	.twinkle {
+		animation-name: mobile-twinkle;
+		animation-duration: 5s;
+	}
+}
+
+@media (max-width: 480px) {
+	/* На очень маленьких экранах еще больше упрощаем */
+	.pulseSlow,
+	.pulseFast {
+		animation-duration: 20s;
+	}
+
+	.twinkle {
+		animation-duration: 6s;
+	}
+}

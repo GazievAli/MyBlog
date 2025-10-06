@@ -3,19 +3,35 @@ import AboutMe from '@/components/About/AboutMe'
 import Header from '@/components/Header/Header'
 import Terminal from '@/components/Terminal/Terminal'
 import TerminalIco from '@/components/Terminal/TerminalIco'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Home() {
 	const [terminalActive, setTerminalActive] = useState(true)
 	const [userName, setUserName] = useState('user')
 	const [currentSection, setCurrentSection] = useState(0)
+
+	const pathname = usePathname()
+
+	useEffect(() => {
+		window.scrollTo(0, 0)
+
+		const handleLoad = () => {
+			window.scrollTo(0, 0)
+		}
+
+		window.addEventListener('load', handleLoad)
+
+		return () => {
+			window.removeEventListener('load', handleLoad)
+		}
+	}, [pathname])
 	const isScrolling = useRef(false)
 
 	const hiddenTerminal = () => {
 		setTerminalActive(!terminalActive)
 	}
 
-	// Функция для плавной прокрутки к секции
 	const scrollToSection = (sectionIndex: number) => {
 		if (isScrolling.current) return
 
@@ -34,7 +50,6 @@ export default function Home() {
 		}
 	}
 
-	// Определяем текущую секцию при обычной прокрутке
 	useEffect(() => {
 		const handleScroll = () => {
 			if (isScrolling.current) return
@@ -62,7 +77,6 @@ export default function Home() {
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
 
-	// Обработчик клавиш для быстрой навигации
 	useEffect(() => {
 		const handleKeyDown = (e: KeyboardEvent) => {
 			const sections = document.querySelectorAll('section')
@@ -90,7 +104,6 @@ export default function Home() {
 		return () => window.removeEventListener('keydown', handleKeyDown)
 	}, [currentSection])
 
-	// Индикатор прогресса с правильным количеством точек
 	const ProgressIndicator = () => {
 		const sections = [
 			{ name: 'Главная', id: 'header' },
@@ -116,7 +129,6 @@ export default function Home() {
 									: 'bg-gray-400 hover:bg-gray-600'
 							}`}
 						/>
-						{/* Подсказка */}
 						<div className='absolute right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'>
 							<div className='bg-gray-900 text-white text-xs py-1 px-2 rounded whitespace-nowrap'>
 								{section.name}
@@ -133,17 +145,14 @@ export default function Home() {
 		<div className='relative'>
 			<ProgressIndicator />
 
-			{/* Секция Header */}
 			<section id='header'>
 				<Header />
 			</section>
 
-			{/* Секция AboutMe */}
 			<section id='about'>
 				<AboutMe />
 			</section>
 
-			{/* Секция Terminal */}
 			<section id='terminal'>
 				{terminalActive ? (
 					<Terminal name={userName} hiddenTerminal={hiddenTerminal} />

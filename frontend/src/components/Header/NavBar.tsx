@@ -27,8 +27,10 @@ export default function NavBar() {
 	]
 
 	const getMobileLinkStyles = (isActive: boolean) => {
-		return `font-medium py-2 transition-colors ${
-			isActive ? 'text-blue-600 font-bold' : 'text-gray-700 hover:text-gray-900'
+		return `font-medium py-2 transition-all duration-300 ${
+			isActive
+				? 'text-blue-600 font-bold transform scale-105'
+				: 'text-gray-700 hover:text-gray-900 hover:transform hover:scale-105'
 		}`
 	}
 
@@ -36,7 +38,7 @@ export default function NavBar() {
 		<div
 			className={`w-full fixed top-0 z-50 transition-all duration-500 ${
 				scrolled
-					? 'h-14 md:h-16 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+					? 'h-14 md:h-16 bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-200/50'
 					: 'h-16 md:h-20 bg-transparent'
 			}`}
 		>

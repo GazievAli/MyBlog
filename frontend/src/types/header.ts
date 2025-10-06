@@ -32,3 +32,29 @@ export interface ImageFieldProps {
 export interface TextFieldProps {
 	loaded: boolean
 }
+
+export interface BaseComponentProps {
+	styles: string
+}
+
+export interface CircleComponentProps extends BaseComponentProps {
+	// Можно добавить специфичные props для кругов
+}
+
+export interface ParticleComponentProps extends BaseComponentProps {
+	// Можно добавить специфичные props для частиц
+}
+
+// Типы для позиционирования
+export interface PositionStyle {
+	top?: string
+	left?: string
+	right?: string
+	bottom?: string
+	transform?: string
+}
+
+// Типы для анимационных задержек
+export interface AnimationDelay {
+	animationDelay?: string
+}

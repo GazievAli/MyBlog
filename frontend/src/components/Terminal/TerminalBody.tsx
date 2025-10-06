@@ -59,21 +59,21 @@ export default function Body({ name, isFullScreen = false }: BodyProps) {
 
 	return (
 		<div
-			className={`flex-1 p-4 md:p-6 font-mono text-[#abb2bf] overflow-y-auto cursor-text bg-transparent
-        [&::-webkit-scrollbar]:w-2
+			className={`flex-1 p-3 md:p-4 lg:p-6 font-mono text-sm md:text-base text-[#abb2bf] overflow-y-auto cursor-text bg-transparent
+        [&::-webkit-scrollbar]:w-1 md:[&::-webkit-scrollbar]:w-2
         [&::-webkit-scrollbar-track]:bg-transparent
-        [&::-webkit-scrollbar-thumb]:bg-gray-600/30
+        [&::-webkit-scrollbar-thumb]:bg-gray-600/20 md:[&::-webkit-scrollbar-thumb]:bg-gray-600/30
         [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:hover:bg-gray-500/40
+        [&::-webkit-scrollbar-thumb]:hover:bg-gray-500/30 md:[&::-webkit-scrollbar-thumb]:hover:bg-gray-500/40
         ${isFullScreen ? 'min-h-0' : ''}`}
 			ref={bodyRef}
 			onClick={focusInput}
 		>
-			<div className='min-h-full space-y-1'>
+			<div className='min-h-full space-y-0.5 md:space-y-1'>
 				{output.map((line, index) => {
 					const safeLine = line || ''
 					return (
-						<div key={index} className='mb-0.5'>
+						<div key={index} className='mb-0 md:mb-0.5'>
 							{safeLine.startsWith('$ ') ? (
 								<TerminalInput safeLine={safeLine} name={name} />
 							) : (

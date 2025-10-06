@@ -12,7 +12,9 @@ interface PhoneTextProps {
 
 export default function PhoneText({ children }: PhoneTextProps) {
 	return (
-		<span className={`${robotoMono.className} border-b border-gray-300 pb-1`}>
+		<span
+			className={`${robotoMono.className} border-b border-gray-300 pb-1 cutsoor-pointer`}
+		>
 			{children}
 		</span>
 	)

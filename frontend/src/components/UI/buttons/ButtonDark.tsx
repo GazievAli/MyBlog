@@ -17,7 +17,7 @@ export default function ButtonDark({
 				rounded-xl font-semibold transition-all duration-500 
 				transform hover:scale-105 active:scale-95
 				flex items-center justify-center
-				backdrop-blur-sm border
+				backdrop-blur-sm border cursor-pointer
 				${className}
 				${
 					scrolled

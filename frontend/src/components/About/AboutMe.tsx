@@ -1,5 +1,6 @@
 'use client'
 
+import styles from '@/styles/about.module.css'
 import { Category, GitHubStats, PersonalInfo } from '@/types/about'
 import { useEffect, useRef, useState } from 'react'
 import AnimatedBg from './AboutAnimateBg'
@@ -8,7 +9,6 @@ import Header from './AboutHeader'
 import PersonalInf from './AboutPersonalInf'
 import STA from './AboutSTA'
 import Skills from './AboutSkills'
-import styles from './styles/about.module.css'
 
 export default function AboutMe() {
 	const [activeCategory, setActiveCategory] = useState(0)

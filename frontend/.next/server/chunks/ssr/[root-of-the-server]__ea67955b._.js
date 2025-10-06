@@ -1199,15 +1199,31 @@ function ScrollIndicator() {
 "[project]/src/components/Header/styles/header.module.css [app-ssr] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
+  "drift": "header-module__FnZKEq__drift",
   "float-delayed": "header-module__FnZKEq__float-delayed",
+  "float-reverse": "header-module__FnZKEq__float-reverse",
   "float-slow": "header-module__FnZKEq__float-slow",
   "floatDelayed": "header-module__FnZKEq__floatDelayed",
+  "floatReverse": "header-module__FnZKEq__floatReverse",
   "floatSlow": "header-module__FnZKEq__floatSlow",
+  "glow-pulse": "header-module__FnZKEq__glow-pulse",
+  "glowPulse": "header-module__FnZKEq__glowPulse",
+  "gradientFlow": "header-module__FnZKEq__gradientFlow",
+  "gradientShift": "header-module__FnZKEq__gradientShift",
   "main": "header-module__FnZKEq__main",
+  "navbarGlow": "header-module__FnZKEq__navbarGlow",
+  "orbit": "header-module__FnZKEq__orbit",
+  "orbit-reverse": "header-module__FnZKEq__orbit-reverse",
+  "orbitReverse": "header-module__FnZKEq__orbitReverse",
+  "particleField": "header-module__FnZKEq__particleField",
+  "particleMove": "header-module__FnZKEq__particleMove",
+  "pulse-fast": "header-module__FnZKEq__pulse-fast",
   "pulse-slow": "header-module__FnZKEq__pulse-slow",
+  "pulseFast": "header-module__FnZKEq__pulseFast",
   "pulseSlow": "header-module__FnZKEq__pulseSlow",
   "shimmer-slow": "header-module__FnZKEq__shimmer-slow",
   "shimmerSlow": "header-module__FnZKEq__shimmerSlow",
+  "twinkle": "header-module__FnZKEq__twinkle",
 });
 }),
 "[project]/src/components/Header/Main.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
@@ -1243,43 +1259,80 @@ function Main() {
         className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].main} w-full h-screen relative overflow-hidden`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$HeaderMainComponents$2f$MainBigCircles$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                            fileName: "[project]/src/components/Header/Main.tsx",
-                            lineNumber: 22,
-                            columnNumber: 6
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$HeaderMainComponents$2f$MainLittlePartile$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                            fileName: "[project]/src/components/Header/Main.tsx",
-                            lineNumber: 23,
-                            columnNumber: 6
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute inset-0 opacity-5 md:opacity-8 lg:opacity-10",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].shimmerSlow}`
+                className: "absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-purple-900/20",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `absolute inset-0 ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].gradientFlow}`
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Header/Main.tsx",
+                        lineNumber: 23,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `absolute inset-0 ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].particleField}`
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Header/Main.tsx",
+                        lineNumber: 26,
+                        columnNumber: 5
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$HeaderMainComponents$2f$MainBigCircles$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                                fileName: "[project]/src/components/Header/Main.tsx",
+                                lineNumber: 30,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$HeaderMainComponents$2f$MainLittlePartile$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                                fileName: "[project]/src/components/Header/Main.tsx",
+                                lineNumber: 31,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `absolute top-1/3 right-1/4 w-32 h-32 bg-indigo-500/15 rounded-full ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].floatReverse} blur-3xl`
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/Main.tsx",
-                                lineNumber: 25,
-                                columnNumber: 7
+                                lineNumber: 34,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `absolute bottom-1/3 left-1/4 w-24 h-24 bg-pink-500/10 rounded-full ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].drift} blur-2xl`
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Header/Main.tsx",
+                                lineNumber: 37,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `absolute top-2/3 left-1/2 w-28 h-28 bg-cyan-500/12 rounded-full ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].orbit} blur-3xl`
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Header/Main.tsx",
+                                lineNumber: 40,
+                                columnNumber: 6
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 opacity-[0.02]",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$styles$2f$header$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].shimmerSlow}`
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Header/Main.tsx",
+                                    lineNumber: 46,
+                                    columnNumber: 7
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Header/Main.tsx",
+                                lineNumber: 45,
+                                columnNumber: 6
                             }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Header/Main.tsx",
-                            lineNumber: 24,
-                            columnNumber: 6
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/Header/Main.tsx",
-                    lineNumber: 21,
-                    columnNumber: 5
-                }, this)
-            }, void 0, false, {
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Header/Main.tsx",
+                        lineNumber: 29,
+                        columnNumber: 5
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/components/Header/Main.tsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1291,30 +1344,30 @@ function Main() {
                             loaded: loaded
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header/Main.tsx",
-                            lineNumber: 34,
+                            lineNumber: 56,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$Fields$2f$ImageField$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             loaded: loaded
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header/Main.tsx",
-                            lineNumber: 35,
+                            lineNumber: 57,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Header/Main.tsx",
-                    lineNumber: 33,
+                    lineNumber: 55,
                     columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Header/Main.tsx",
-                lineNumber: 32,
+                lineNumber: 54,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$HeaderMainComponents$2f$MainScrollIndicator$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/components/Header/Main.tsx",
-                lineNumber: 39,
+                lineNumber: 61,
                 columnNumber: 4
             }, this)
         ]
@@ -1848,10 +1901,23 @@ __turbopack_context__.v({
   "float-1": "terminal-module__fjpNAW__float-1",
   "float-2": "terminal-module__fjpNAW__float-2",
   "float-3": "terminal-module__fjpNAW__float-3",
+  "float-4": "terminal-module__fjpNAW__float-4",
+  "float-5": "terminal-module__fjpNAW__float-5",
   "float1": "terminal-module__fjpNAW__float1",
   "float2": "terminal-module__fjpNAW__float2",
   "float3": "terminal-module__fjpNAW__float3",
+  "float4": "terminal-module__fjpNAW__float4",
+  "float5": "terminal-module__fjpNAW__float5",
+  "gradientOverlay": "terminal-module__fjpNAW__gradientOverlay",
+  "gradientShift": "terminal-module__fjpNAW__gradientShift",
+  "particles": "terminal-module__fjpNAW__particles",
+  "particlesMove": "terminal-module__fjpNAW__particlesMove",
+  "pulse-1": "terminal-module__fjpNAW__pulse-1",
+  "pulse-2": "terminal-module__fjpNAW__pulse-2",
+  "pulse1": "terminal-module__fjpNAW__pulse1",
+  "pulse2": "terminal-module__fjpNAW__pulse2",
   "terminal": "terminal-module__fjpNAW__terminal",
+  "twinkle": "terminal-module__fjpNAW__twinkle",
 });
 }),
 "[project]/src/components/Terminal/TerminalAnimatedBg.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
@@ -1862,36 +1928,81 @@ __turbopack_context__.s([
     ()=>AnimatedBg
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/Terminal/style/terminal.module.css [app-ssr] (css module)");
+'use client';
+;
 ;
 function AnimatedBg() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "absolute inset-0",
+        className: "absolute inset-0 overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-1/4 left-1/4 w-72 h-72 bg-blue-800/3 rounded-full animate-float-1 blur-3xl"
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].float1} absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl`
             }, void 0, false, {
                 fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
-                lineNumber: 4,
+                lineNumber: 8,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-1/3 right-1/4 w-96 h-96 bg-purple-800/3 rounded-full animate-float-2 blur-3xl"
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].float2} absolute bottom-1/3 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl`
             }, void 0, false, {
                 fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
-                lineNumber: 5,
+                lineNumber: 11,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-1/2 left-1/3 w-80 h-80 bg-cyan-800/3 rounded-full animate-float-3 blur-3xl"
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].float3} absolute top-1/2 left-1/3 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl`
             }, void 0, false, {
                 fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
-                lineNumber: 6,
+                lineNumber: 14,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].float4} absolute top-1/3 right-1/3 w-64 h-64 bg-indigo-500/8 rounded-full blur-3xl`
+            }, void 0, false, {
+                fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
+                lineNumber: 18,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].float5} absolute bottom-1/4 left-1/5 w-88 h-88 bg-pink-500/8 rounded-full blur-3xl`
+            }, void 0, false, {
+                fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
+                lineNumber: 21,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].pulse1} absolute top-3/4 left-2/3 w-40 h-40 bg-emerald-400/5 rounded-full blur-2xl`
+            }, void 0, false, {
+                fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
+                lineNumber: 25,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].pulse2} absolute top-1/6 right-1/6 w-32 h-32 bg-amber-400/5 rounded-full blur-2xl`
+            }, void 0, false, {
+                fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
+                lineNumber: 28,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].gradientOverlay} absolute inset-0`
+            }, void 0, false, {
+                fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
+                lineNumber: 32,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Terminal$2f$style$2f$terminal$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].particles} absolute inset-0`
+            }, void 0, false, {
+                fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
+                lineNumber: 34,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Terminal/TerminalAnimatedBg.tsx",
-        lineNumber: 3,
+        lineNumber: 7,
         columnNumber: 3
     }, this);
 }

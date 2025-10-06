@@ -1,8 +1,8 @@
 'use client'
 
+import styles from '@/styles/terminal.module.css'
 import { TerminalProps } from '@/types/terminal'
 import { useEffect, useState } from 'react'
-import styles from './style/terminal.module.css'
 import AnimatedBg from './TerminalAnimatedBg'
 import Body from './TerminalBody'
 import NavBar from './TerminalNavBar'
@@ -31,7 +31,7 @@ export default function Terminal({ name, hiddenTerminal }: TerminalProps) {
 		if (fullTerm) {
 			return 'w-screen h-screen fixed inset-0 z-50 rounded-none'
 		}
-		return 'w-full max-w-4xl xl:max-w-5xl h-80 md:h-96 lg:h-[28rem] rounded-2xl mb-8'
+		return 'w-full max-w-4xl xl:max-w-5xl h-64 md:h-80 lg:h-96 xl:h-[28rem] rounded-xl md:rounded-2xl mb-6 md:mb-8'
 	}
 
 	return (
@@ -41,14 +41,17 @@ export default function Terminal({ name, hiddenTerminal }: TerminalProps) {
 			<AnimatedBg />
 
 			<div
-				className={`${
-					fullTerm ? 'w-full h-full' : 'container mx-auto px-4 sm:px-6 lg:px-8'
-				} flex flex-col items-center justify-center relative z-10 min-h-screen`}
+				className={`${styles.terminalContainer} ${
+					fullTerm
+						? 'w-full h-full'
+						: 'container mx-auto px-3 sm:px-4 md:px-6 lg:px-8'
+				} flex flex-col items-center justify-center relative z-10 min-h-screen py-4 md:py-0`}
 			>
 				<div
 					className={
 						getTerminalStyle() +
-						' bg-black/20 backdrop-blur-lg shadow-xl shadow-black/30 border border-gray-700/30 cursor-text transition-all duration-300 flex flex-col'
+						' bg-black/20 backdrop-blur-lg shadow-xl shadow-black/30 border border-gray-700/30 cursor-text transition-all duration-300 flex flex-col ' +
+						styles.terminalWindow
 					}
 				>
 					<NavBar

@@ -20,4 +20,4 @@ node_modules/
 Thumbs.db
 
 env
-next
+.next
