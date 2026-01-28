@@ -1,27 +1,42 @@
 'use client'
+
+import { useState } from 'react'
+import NavBar from '@/components/Header/NavBar'
+import Main from '@/components/Header/Main'
 import AboutMe from '@/components/About/AboutMe'
-import Header from '@/components/Header/Header'
 import Terminal from '@/components/Terminal/Terminal'
 import TerminalIco from '@/components/Terminal/TerminalIco'
-import { useState } from 'react'
+import Footer from '@/components/Footer/Footer'
+import {ScrollingStack} from "@/components/ScrollingStack/ScrollingStack";
+import {DevLife} from "@/components/DevLife/DevLife";
+import {EducationScience} from "@/components/EducationScience/EducationScience";
 
 export default function Home() {
-	const [terminalActive, setTerminalActive] = useState(true)
-	const [userName, setUserName] = useState('user')
+    const [terminalActive, setTerminalActive] = useState(true)
 
-	const hiddenTerminal = () => {
-		setTerminalActive(!terminalActive)
-	}
+    const hiddenTerminal = () => {
+        setTerminalActive(!terminalActive)
+    }
 
-	return (
-		<div>
-			<Header />
-			<AboutMe />
-			{terminalActive ? (
-				<Terminal name={userName} hiddenTerminal={hiddenTerminal} />
-			) : (
-				<TerminalIco hideTerminal={hiddenTerminal} />
-			)}
-		</div>
-	)
+    return (
+        <div className="bg-[#0d1117] min-h-screen flex flex-col">
+
+            <NavBar />
+
+            {/* Секции лендинга */}
+            <Main />
+            <ScrollingStack />
+            <AboutMe />
+            <DevLife />
+            <EducationScience />
+            {/* Терминал */}
+            {terminalActive ? (
+                <Terminal name="user" hiddenTerminal={hiddenTerminal} />
+            ) : (
+                <TerminalIco hideTerminal={hiddenTerminal} />
+            )}
+
+            <Footer />
+        </div>
+    )
 }

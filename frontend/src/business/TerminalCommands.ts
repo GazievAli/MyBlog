@@ -1,196 +1,144 @@
 import { Command } from './TerminalInterfaces'
 import { Terminal } from './TerminalLogic'
 
-const validateNumbers = (
-	args: string[],
-	minCount: number = 1
-): string | number[] => {
-	if (args.length < minCount) {
-		return `Ошибка: требуется минимум ${minCount} число(а)`
-	}
+// --- НОВЫЕ СИСТЕМНЫЕ КОМАНДЫ ---
 
-	const numbers = args.map(Number)
-	if (numbers.some(isNaN)) {
-		return 'Ошибка: все аргументы должны быть числами'
-	}
-
-	return numbers
+export const lsCommand: Command = {
+    name: 'ls',
+    description: 'Показать содержимое текущей папки',
+    execute: (args, terminal) => {
+        return terminal.listDir()
+    }
 }
 
-const executeWithValidation = (
-	args: string[],
-	operation: (numbers: number[]) => number,
-	minCount: number = 1
-): string => {
-	const validationResult = validateNumbers(args, minCount)
-	if (typeof validationResult === 'string') return validationResult
-
-	try {
-		return String(operation(validationResult))
-	} catch (error) {
-		return `Ошибка: ${
-			error instanceof Error ? error.message : 'неизвестная ошибка'
-		}`
-	}
+export const cdCommand: Command = {
+    name: 'cd',
+    description: 'Перейти в папку (cd foldername или cd ..)',
+    execute: (args, terminal) => {
+        if (!args[0]) return ''
+        return terminal.changeDir(args[0])
+    }
 }
 
-export const echoCommand: Command = {
-	name: 'echo',
-	description: 'Печатает введенный текст',
-	execute: (args: string[]) => args.join(' ') || 'Текст не предоставлен',
+export const catCommand: Command = {
+    name: 'cat',
+    description: 'Прочитать содержимое файла',
+    execute: (args, terminal) => {
+        if (!args[0]) return 'Usage: cat <filename>'
+        return terminal.readFile(args[0])
+    }
+}
+
+export const pwdCommand: Command = {
+    name: 'pwd',
+    description: 'Показать текущий путь',
+    execute: (args, terminal) => {
+        return terminal.getPathString()
+    }
+}
+
+export const neofetchCommand: Command = {
+    name: 'neofetch',
+    description: 'Информация о системе',
+    execute: () => {
+        return `
+       .---.       user@gaziev.dev
+      /     \\      ---------------
+      | () () |     OS: NeuralOracle OS v1.0
+       \\  ^  /      Kernel: Next.js 14
+        |||||       Uptime: Forever
+        |||||       Shell: ZSH (Web Emulation)
+                    Resolution: 1920x1080
+      ( Code )      CPU: Human Brain (19 y.o.)
+       \`---\`        Memory: Infinite Learning
+                    
+                    Theme: Dark / Rose / Amber
+                    Icons: FontAwesome
+    `
+    }
 }
 
 export const helpCommand: Command = {
-	name: 'help',
-	description: 'Показывает все доступные команды',
-	execute: (args: string[], terminal: Terminal) => {
-		const commands = Array.from(terminal.getCommands())
+    name: 'help',
+    description: 'Показывает все доступные команды',
+    execute: (args, terminal) => {
+        const commands = Array.from(terminal.getCommands().values())
+        return `
+Available commands:
 
-		return `Доступные команды:\n\n${commands
-			.map(([name, cmd]) => `${name.padEnd(12)} - ${cmd.description}`)
-			.join('\n')}\n\nИспользуйте: команда --help для подробной информации`
-	},
+${commands.map(cmd => `  ${cmd.name.padEnd(10)} ${cmd.description}`).join('\n')}
+
+Tips:
+  - Используйте 'ls' чтобы увидеть файлы
+  - Используйте 'cat <файл>' чтобы прочитать их
+  - Используйте 'neofetch' для красоты
+`
+    },
 }
+
+// --- СТАРЫЕ (МАТЕМАТИЧЕСКИЕ) КОМАНДЫ ---
+// (Оставляем их, чтобы функционал не пропал, но они теперь вторичны)
 
 export const clearCommand: Command = {
-	name: 'clear',
-	description: 'Очищает историю терминала',
-	execute: (args: string[], terminal: Terminal) => {
-		terminal.clearHistory()
-		terminal.clearUICallBack?.()
-		return ''
-	},
+    name: 'clear',
+    description: 'Очистить терминал',
+    execute: (args, terminal) => {
+        terminal.clearHistory()
+        terminal.clearUICallBack?.()
+        return ''
+    },
 }
 
-export const sumCommand: Command = {
-	name: 'sum',
-	description: 'Сумма чисел, например: 4 3 5 -> 12.',
-	execute: (args: string[]) =>
-		executeWithValidation(args, numbers => numbers.reduce((a, b) => a + b, 0)),
-}
-
-export const minusCommand: Command = {
-	name: 'minus',
-	description: 'Вычитание чисел, например: 20 4 5 -> 11.',
-	execute: (args: string[]) =>
-		executeWithValidation(args, numbers => numbers.reduce((a, b) => a - b)),
-}
-
-export const multiplicationCommand: Command = {
-	name: 'multi',
-	description: 'Умножение чисел, например: 3 4 5 -> 60.',
-	execute: (args: string[]) =>
-		executeWithValidation(args, numbers => numbers.reduce((a, b) => a * b, 1)),
-}
-
-export const divisionCommand: Command = {
-	name: 'division',
-	description: 'Деление чисел, например: 20 5 2 -> 2',
-	execute: (args: string[]) =>
-		executeWithValidation(args, numbers => {
-			if (numbers.slice(1).some(n => n === 0)) {
-				throw new Error('деление на ноль')
-			}
-			return numbers.reduce((a, b) => a / b)
-		}),
-}
-
-export const powCommand: Command = {
-	name: 'pow',
-	description: 'Возведение в степень, например: 3 4 -> 81',
-	execute: (args: string[]) => {
-		if (args.length !== 2) {
-			return 'Ошибка: команда требует ровно 2 числа (основание и показатель)'
-		}
-
-		const validationResult = validateNumbers(args, 2)
-		if (typeof validationResult === 'string') return validationResult
-
-		const [base, exponent] = validationResult
-		return String(Math.pow(base, exponent))
-	},
-}
-
-export const sqrtCommand: Command = {
-	name: 'sqrt',
-	description: 'Вычисление квадратного корня, например: 25 -> 5.',
-	execute: (args: string[]) => {
-		if (args.length !== 1) {
-			return 'Ошибка: команда требует ровно 1 число'
-		}
-
-		const validationResult = validateNumbers(args, 1)
-		if (typeof validationResult === 'string') return validationResult
-
-		const [num] = validationResult
-		if (num < 0) {
-			return 'Ошибка: нельзя вычислить корень из отрицательного числа'
-		}
-
-		return String(Math.sqrt(num))
-	},
-}
-
-export const randomCommand: Command = {
-	name: 'random',
-	description:
-		'Генерирует случайное целое число между минимумом и максимумом (включительно)',
-	execute: (args: string[]) => {
-		if (args.length !== 2) {
-			return 'Ошибка: команда требует ровно 2 числа (минимум и максимум)'
-		}
-
-		const validationResult = validateNumbers(args, 2)
-		if (typeof validationResult === 'string') return validationResult
-
-		const [min, max] = validationResult
-		if (min > max) {
-			return 'Ошибка: минимум не может быть больше максимума'
-		}
-
-		return String(Math.floor(Math.random() * (max - min + 1)) + min)
-	},
+export const echoCommand: Command = {
+    name: 'echo',
+    description: 'Вывести текст',
+    execute: (args) => args.join(' '),
 }
 
 export const dateCommand: Command = {
-	name: 'date',
-	description: 'Показывает текущую дату и время',
-	execute: () => new Date().toLocaleString('ru-RU'),
+    name: 'date',
+    description: 'Текущая дата',
+    execute: () => new Date().toLocaleString('ru-RU'),
 }
 
-export const reverseCommand: Command = {
-	name: 'reverse',
-	description: 'Инвертирует вводимый текст',
-	execute: (args: string[]) =>
-		args.length
-			? args.join(' ').split('').reverse().join('')
-			: 'Ошибка: требуется текст для обращения',
+// Математику можно сократить или оставить как есть
+const safeEval = (fn: () => number) => {
+    try { return String(fn()) } catch { return 'Error' }
 }
 
-export const systemCommand: Command = {
-	name: 'system',
-	description: 'Показывает информацию о системе',
-	execute: () =>
-		`Платформа: ${navigator.platform}
-Язык: ${navigator.language}
-Пользовательский агент: ${navigator.userAgent.substring(0, 50)}...
-Время: ${new Date().toLocaleString('ru-RU')}`.trim(),
+export const sumCommand: Command = {
+    name: 'sum',
+    description: 'Сложение (sum 2 2)',
+    execute: (args) => safeEval(() => args.map(Number).reduce((a, b) => a + b, 0))
 }
+
+export const whoamiCommand: Command = {
+    name: 'whoami',
+    description: 'Кто я?',
+    execute: () => 'root'
+}
+
+export const sudoCommand: Command = {
+    name: 'sudo',
+    description: 'Выполнить от имени суперпользователя',
+    execute: () => 'Permission denied: you are viewing a portfolio, not a server :)'
+}
+
+// --- СБОРКА ВСЕХ КОМАНД ---
 
 export const commandMap = {
-	echo: echoCommand,
-	help: helpCommand,
-	clear: clearCommand,
-	sum: sumCommand,
-	minus: minusCommand,
-	multi: multiplicationCommand,
-	division: divisionCommand,
-	pow: powCommand,
-	sqrt: sqrtCommand,
-	random: randomCommand,
-	date: dateCommand,
-	reverse: reverseCommand,
-	system: systemCommand,
+    ls: lsCommand,
+    cd: cdCommand,
+    cat: catCommand,
+    pwd: pwdCommand,
+    neofetch: neofetchCommand,
+    help: helpCommand,
+    clear: clearCommand,
+    echo: echoCommand,
+    date: dateCommand,
+    sum: sumCommand,
+    whoami: whoamiCommand,
+    sudo: sudoCommand
 } as const
 
 export const allCommands = Object.values(commandMap)
