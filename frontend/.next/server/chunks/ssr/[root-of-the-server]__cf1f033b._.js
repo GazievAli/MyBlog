@@ -1174,674 +1174,88 @@ function Footer() {
     }, this);
 }
 }),
-"[project]/src/components/Projects/ProjectCard.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/src/app/stack/page.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
     "default",
-    ()=>ProjectCard
+    ()=>StackPage
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
-;
-;
-;
-function ProjectCard({ project }) {
-    const statusColors = {
-        completed: 'bg-green-500/10 text-green-400 border-green-500/20',
-        'in-progress': 'bg-amber-500/10 text-amber-400 border-amber-500/20',
-        planned: 'bg-gray-500/10 text-gray-400 border-gray-500/20'
-    };
-    const statusLabels = {
-        completed: 'Завершен',
-        'in-progress': 'В разработке',
-        planned: 'Идея'
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "group relative flex flex-col bg-[#161b22] border border-gray-800 rounded-2xl overflow-hidden hover:border-rose-500/50 hover:shadow-[0_0_30px_rgba(244,63,94,0.1)] transition-all duration-300 h-full",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative w-full h-48 overflow-hidden bg-[#0d1117]",
-                children: [
-                    project.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        src: project.image,
-                        alt: project.title,
-                        fill: true,
-                        className: "object-cover group-hover:scale-105 transition-transform duration-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 32,
-                        columnNumber: 21
-                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-full h-full flex items-center justify-center text-gray-700 font-mono",
-                        children: "NO IMAGE"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 39,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-mono font-bold border backdrop-blur-md ${statusColors[project.status]}`,
-                        children: statusLabels[project.status]
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 44,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                lineNumber: 30,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 flex flex-col flex-1",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-2xl font-bold text-white mb-3 group-hover:text-rose-400 transition-colors",
-                        children: project.title
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 50,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-gray-400 text-sm leading-relaxed mb-6 flex-1",
-                        children: project.description
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 53,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-wrap gap-2 mb-6",
-                        children: project.tags.map((tag)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "px-2 py-1 text-xs font-mono text-blue-300 bg-blue-500/10 rounded border border-blue-500/10",
-                                children: tag
-                            }, tag, false, {
-                                fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                lineNumber: 59,
-                                columnNumber: 25
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 57,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-4 mt-auto pt-4 border-t border-gray-800",
-                        children: [
-                            project.githubLink && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: project.githubLink,
-                                target: "_blank",
-                                className: "flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        className: "w-5 h-5",
-                                        fill: "currentColor",
-                                        viewBox: "0 0 24 24",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                            fillRule: "evenodd",
-                                            d: "M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z",
-                                            clipRule: "evenodd"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                            lineNumber: 68,
-                                            columnNumber: 94
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 68,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "Code"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 69,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                lineNumber: 67,
-                                columnNumber: 25
-                            }, this),
-                            project.demoLink && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: project.demoLink,
-                                target: "_blank",
-                                className: "flex items-center gap-2 text-sm text-rose-400 hover:text-rose-300 transition-colors ml-auto",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "Live Demo"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 74,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        className: "w-4 h-4",
-                                        fill: "none",
-                                        viewBox: "0 0 24 24",
-                                        stroke: "currentColor",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round",
-                                            strokeWidth: 2,
-                                            d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                            lineNumber: 75,
-                                            columnNumber: 108
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 75,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                lineNumber: 73,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 65,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                lineNumber: 49,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-        lineNumber: 28,
-        columnNumber: 9
-    }, this);
-}
-}),
-"[project]/src/components/Overlays/AboutSheet.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>AboutSheet
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-;
-;
-// ... (данные techStack и timeline остаются без изменений) ...
-const techStack = {
-    Frontend: [
-        'Next.js 14',
-        'React',
-        'TypeScript',
-        'TailwindCSS',
-        'Framer Motion',
-        'Zustand'
-    ],
-    Backend: [
-        'Nest.js',
-        'Node.js',
-        'PostgreSQL',
-        'Prisma ORM',
-        'Docker',
-        'Redis'
-    ],
-    'AI & Data': [
-        'Python',
-        'PyTorch',
-        'Pandas',
-        'NumPy',
-        'Math Analysis',
-        'Jupyter'
-    ],
-    Tools: [
-        'Git',
-        'Figma',
-        'Linux',
-        'Postman',
-        'Vercel'
-    ]
-};
-const timeline = [
-    {
-        year: '2023',
-        title: 'Старт в IT',
-        desc: 'Начало глубокого изучения программирования. Первые шаги в Python и базовом вебе.'
-    },
-    {
-        year: '2024',
-        title: 'Поступление в РТУ МИРЭА',
-        desc: 'Факультет программной инженерии. Направление "Искусственный интеллект и анализ данных". Углубление в математику.'
-    },
-    {
-        year: '2025',
-        title: 'Fullstack Разработка',
-        desc: 'Переход к сложным архитектурам. Изучение Nest.js и Next.js. Создание пет-проектов с микросервисной архитектурой.'
-    },
-    {
-        year: 'Сейчас',
-        title: 'AI Task Manager & Freelance',
-        desc: 'Разработка собственной системы управления задачами с AI. Активное изучение Machine Learning для интеграции в веб.'
-    }
-];
-function AboutSheet({ isOpen, onClose, initialTab = 'bio' }) {
-    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('bio');
-    const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Обновляем активный таб, если меняется initialTab или при открытии
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (isOpen) {
-            setActiveTab(initialTab);
-            setIsVisible(true);
-            document.body.style.overflow = 'hidden';
-        } else {
-            const timer = setTimeout(()=>setIsVisible(false), 500);
-            document.body.style.overflow = 'unset';
-            return ()=>clearTimeout(timer);
-        }
-    }, [
-        isOpen,
-        initialTab
-    ]);
-    if (!isVisible && !isOpen) return null;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `fixed inset-0 z-[100] flex justify-end transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`,
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-500",
-                onClick: onClose
-            }, void 0, false, {
-                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                lineNumber: 65,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `
-          relative w-full max-w-2xl h-full bg-[#0d1117] border-l border-white/10 shadow-2xl 
-          transform transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]
-          flex flex-col
-          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-        `,
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: onClose,
-                        className: "absolute top-6 right-6 p-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-colors z-20",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            className: "w-6 h-6",
-                            fill: "none",
-                            viewBox: "0 0 24 24",
-                            stroke: "currentColor",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                strokeWidth: 2,
-                                d: "M6 18L18 6M6 6l12 12"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                lineNumber: 82,
-                                columnNumber: 100
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                            lineNumber: 82,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                        lineNumber: 78,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "p-8 pb-4 border-b border-gray-800 bg-[#0d1117]/95 backdrop-blur z-10",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-3xl font-bold text-white mb-2",
-                                children: activeTab === 'bio' ? 'Обо мне' : 'Мой Арсенал'
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                lineNumber: 87,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-400",
-                                children: "Газиев Али, 19 лет, Москва"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                lineNumber: 90,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex gap-6 mt-8 border-b border-gray-800",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('bio'),
-                                        className: `pb-3 text-sm font-medium transition-colors relative ${activeTab === 'bio' ? 'text-rose-400' : 'text-gray-500 hover:text-gray-300'}`,
-                                        children: [
-                                            "Биография",
-                                            activeTab === 'bio' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "absolute bottom-0 left-0 w-full h-0.5 bg-rose-500 rounded-t-full"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                lineNumber: 98,
-                                                columnNumber: 53
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                        lineNumber: 93,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('stack'),
-                                        className: `pb-3 text-sm font-medium transition-colors relative ${activeTab === 'stack' ? 'text-amber-400' : 'text-gray-500 hover:text-gray-300'}`,
-                                        children: [
-                                            "Технологический стек",
-                                            activeTab === 'stack' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 rounded-t-full"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                lineNumber: 105,
-                                                columnNumber: 55
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                        lineNumber: 100,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                lineNumber: 92,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                        lineNumber: 86,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex-1 overflow-y-auto p-8 custom-scrollbar",
-                        children: [
-                            activeTab === 'bio' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-12 animate-fade-in",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "prose prose-invert",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-lg leading-relaxed text-gray-300",
-                                            children: "Привет! Я студент РТУ МИРЭА, который превратил увлечение кодом в образ жизни. Моя суперсила — находить баланс между сложной математикой (которую я люблю) и красивыми пользовательскими интерфейсами."
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                            lineNumber: 117,
-                                            columnNumber: 33
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                        lineNumber: 116,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "space-y-8 relative",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute left-[7px] top-2 bottom-2 w-[2px] bg-gray-800"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                lineNumber: 124,
-                                                columnNumber: 33
-                                            }, this),
-                                            timeline.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "relative pl-8 group",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-rose-500 bg-[#0d1117] group-hover:bg-rose-500 transition-colors"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                            lineNumber: 127,
-                                                            columnNumber: 41
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-xs font-mono text-rose-400 mb-1 block",
-                                                            children: item.year
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                            lineNumber: 128,
-                                                            columnNumber: 41
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "text-xl font-bold text-white mb-2",
-                                                            children: item.title
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                            lineNumber: 129,
-                                                            columnNumber: 41
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-gray-400 text-sm leading-relaxed",
-                                                            children: item.desc
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                            lineNumber: 130,
-                                                            columnNumber: 41
-                                                        }, this)
-                                                    ]
-                                                }, index, true, {
-                                                    fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                    lineNumber: 126,
-                                                    columnNumber: 37
-                                                }, this))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                        lineNumber: 123,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                lineNumber: 115,
-                                columnNumber: 25
-                            }, this),
-                            activeTab === 'stack' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid gap-8 animate-fade-in",
-                                children: [
-                                    Object.entries(techStack).map(([category, items])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-[#161b22]/50 border border-gray-800 rounded-2xl p-6 hover:border-gray-700 transition-colors",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "text-lg font-bold text-white mb-4 flex items-center gap-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: `w-2 h-2 rounded-full ${category === 'Frontend' ? 'bg-blue-500' : category === 'Backend' ? 'bg-rose-500' : category === 'AI & Data' ? 'bg-amber-500' : 'bg-gray-500'}`
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                            lineNumber: 143,
-                                                            columnNumber: 33
-                                                        }, this),
-                                                        category
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                    lineNumber: 142,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex flex-wrap gap-2",
-                                                    children: items.map((tech)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "px-3 py-1.5 bg-[#0d1117] border border-gray-700 rounded-lg text-sm text-gray-300 font-mono",
-                                                            children: tech
-                                                        }, tech, false, {
-                                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                            lineNumber: 152,
-                                                            columnNumber: 45
-                                                        }, this))
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                    lineNumber: 150,
-                                                    columnNumber: 37
-                                                }, this)
-                                            ]
-                                        }, category, true, {
-                                            fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                            lineNumber: 141,
-                                            columnNumber: 33
-                                        }, this)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-4 p-4 border border-rose-500/20 bg-rose-500/5 rounded-xl",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                className: "text-rose-400 font-bold mb-2 text-sm uppercase tracking-wider",
-                                                children: "Currently Learning"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                lineNumber: 161,
-                                                columnNumber: 33
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-300 text-sm",
-                                                children: "Deep Learning (Neural Networks), Advanced Kubernetes, System Design for High Load."
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                                lineNumber: 162,
-                                                columnNumber: 33
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                        lineNumber: 160,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                                lineNumber: 139,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                        lineNumber: 111,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-                lineNumber: 70,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/src/components/Overlays/AboutSheet.tsx",
-        lineNumber: 63,
-        columnNumber: 9
-    }, this);
-}
-}),
-"[project]/src/app/projects/page.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>ProjectsPage
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$NavBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Header/NavBar.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Footer$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Footer/Footer.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Projects$2f$ProjectCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Projects/ProjectCard.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Overlays$2f$AboutSheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Overlays/AboutSheet.tsx [app-ssr] (ecmascript)");
 'use client';
 ;
 ;
 ;
-;
-;
-;
-// --- ДАННЫЕ ПРОЕКТОВ ---
-const projectsData = [
+// Данные
+const techCategories = [
     {
-        title: 'AI Task Manager',
-        description: 'Интеллектуальная система управления задачами. Использует NLP для анализа описания задач и автоматического назначения приоритетов.',
-        tags: [
-            'Nest.js',
-            'Python',
-            'PostgreSQL',
-            'OpenAI API'
-        ],
-        image: '',
-        githubLink: 'https://github.com',
-        status: 'in-progress'
-    },
-    {
-        title: 'Personal Portfolio',
-        description: 'Текущий сайт. Полностью кастомный дизайн, эмуляция терминала, интерактивные анимации и оптимизация производительности.',
-        tags: [
+        title: 'Frontend Ecosystem',
+        color: 'blue',
+        desc: 'Создание интерфейсов, которые вызывают восторг.',
+        items: [
             'Next.js 14',
-            'Tailwind',
+            'React',
             'TypeScript',
-            'Framer Motion'
-        ],
-        image: '',
-        githubLink: 'https://github.com',
-        demoLink: 'https://gaziev.dev',
-        status: 'completed'
+            'TailwindCSS',
+            'Framer Motion',
+            'Zustand',
+            'Shadcn UI',
+            'HTML5/CSS3'
+        ]
     },
     {
-        title: 'University Schedule Bot',
-        description: 'Telegram-бот для расписания РТУ МИРЭА. Парсинг данных с сайта вуза, уведомления о парах.',
-        tags: [
-            'Java',
-            'Spring Boot',
-            'Telegram API',
-            'Docker'
-        ],
-        image: '',
-        githubLink: 'https://github.com',
-        status: 'completed'
+        title: 'Backend & Infrastructure',
+        color: 'rose',
+        desc: 'Надежная серверная логика и архитектура.',
+        items: [
+            'Nest.js',
+            'Node.js',
+            'PostgreSQL',
+            'Prisma ORM',
+            'Docker',
+            'Redis',
+            'Nginx',
+            'Linux'
+        ]
     },
     {
-        title: 'Neural Data Analyzer',
-        description: 'Учебный проект по анализу больших данных. Кластеризация пользователей на основе их поведения.',
-        tags: [
+        title: 'AI & Data Science',
+        color: 'amber',
+        desc: 'Анализ данных и интеграция нейросетей.',
+        items: [
             'Python',
+            'PyTorch',
             'Pandas',
-            'Scikit-learn',
-            'Jupyter'
-        ],
-        image: '',
-        status: 'planned'
+            'NumPy',
+            'OpenAI API',
+            'LangChain',
+            'Jupyter',
+            'Matplotlib'
+        ]
+    },
+    {
+        title: 'DevOps & Tools',
+        color: 'gray',
+        desc: 'Инструменты, ускоряющие разработку.',
+        items: [
+            'Git / GitHub',
+            'Postman',
+            'Figma',
+            'VS Code',
+            'Webpack',
+            'Eslint/Prettier'
+        ]
     }
 ];
-function ProjectsPage() {
-    const [aboutSheetOpen, setAboutSheetOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [activeSheetTab, setActiveSheetTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('bio');
-    const handleOpenAbout = ()=>{
-        setActiveSheetTab('bio');
-        setAboutSheetOpen(true);
-    };
-    const handleOpenStack = ()=>{
-        setActiveSheetTab('stack');
-        setAboutSheetOpen(true);
-    };
+function StackPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-[#0d1117] min-h-screen flex flex-col",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$NavBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                onOpenAbout: handleOpenAbout,
-                onOpenStack: handleOpenStack
-            }, void 0, false, {
-                fileName: "[project]/src/app/projects/page.tsx",
-                lineNumber: 62,
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$NavBar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/src/app/stack/page.tsx",
+                lineNumber: 37,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1850,103 +1264,233 @@ function ProjectsPage() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"
                     }, void 0, false, {
-                        fileName: "[project]/src/app/projects/page.tsx",
-                        lineNumber: 66,
+                        fileName: "[project]/src/app/stack/page.tsx",
+                        lineNumber: 40,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-rose-600/10 blur-[120px] rounded-full pointer-events-none"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/projects/page.tsx",
-                        lineNumber: 67,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "container mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
+                        className: "container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-center mb-16",
+                                className: "text-center mb-20",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "text-4xl md:text-6xl font-bold text-white mb-4",
+                                        className: "text-4xl md:text-6xl font-bold text-white mb-6",
                                         children: [
-                                            "Мои ",
+                                            "Мой ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-amber-300",
-                                                children: "Проекты"
+                                                className: "text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-rose-400",
+                                                children: "Арсенал"
                                             }, void 0, false, {
-                                                fileName: "[project]/src/app/projects/page.tsx",
-                                                lineNumber: 73,
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 46,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
-                                        fileName: "[project]/src/app/projects/page.tsx",
-                                        lineNumber: 72,
+                                        fileName: "[project]/src/app/stack/page.tsx",
+                                        lineNumber: 45,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-gray-400 max-w-2xl mx-auto text-lg",
-                                        children: "От университетских лабораторных до сложных систем."
+                                        children: "Я выбираю инструменты не потому, что они популярны, а потому что они решают задачи бизнеса эффективно и надежно."
                                     }, void 0, false, {
-                                        fileName: "[project]/src/app/projects/page.tsx",
-                                        lineNumber: 75,
+                                        fileName: "[project]/src/app/stack/page.tsx",
+                                        lineNumber: 48,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/src/app/projects/page.tsx",
-                                lineNumber: 71,
+                                fileName: "[project]/src/app/stack/page.tsx",
+                                lineNumber: 44,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
-                                children: projectsData.map((project, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Projects$2f$ProjectCard$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                        project: project
-                                    }, index, false, {
-                                        fileName: "[project]/src/app/projects/page.tsx",
-                                        lineNumber: 82,
+                                className: "grid grid-cols-1 md:grid-cols-2 gap-8",
+                                children: techCategories.map((cat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "bg-[#161b22]/80 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 hover:border-gray-600 transition-all duration-300 group",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `
+                            w-12 h-12 rounded-xl flex items-center justify-center mb-6 
+                            ${cat.color === 'blue' ? 'bg-blue-500/10 text-blue-400' : cat.color === 'rose' ? 'bg-rose-500/10 text-rose-400' : cat.color === 'amber' ? 'bg-amber-500/10 text-amber-400' : 'bg-gray-500/10 text-gray-400'}
+                        `,
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                    className: "w-6 h-6",
+                                                    fill: "none",
+                                                    viewBox: "0 0 24 24",
+                                                    stroke: "currentColor",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        strokeLinecap: "round",
+                                                        strokeLinejoin: "round",
+                                                        strokeWidth: 2,
+                                                        d: "M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/stack/page.tsx",
+                                                        lineNumber: 65,
+                                                        columnNumber: 116
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/stack/page.tsx",
+                                                    lineNumber: 65,
+                                                    columnNumber: 37
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 59,
+                                                columnNumber: 33
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "text-2xl font-bold text-white mb-2",
+                                                children: cat.title
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 68,
+                                                columnNumber: 33
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-gray-400 mb-8 h-10",
+                                                children: cat.desc
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 69,
+                                                columnNumber: 33
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex flex-wrap gap-3",
+                                                children: cat.items.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: `
+                                        px-3 py-1.5 rounded-lg text-sm font-mono border transition-colors
+                                        ${cat.color === 'blue' ? 'border-blue-500/20 bg-blue-500/5 text-blue-300 group-hover:bg-blue-500/10' : cat.color === 'rose' ? 'border-rose-500/20 bg-rose-500/5 text-rose-300 group-hover:bg-rose-500/10' : cat.color === 'amber' ? 'border-amber-500/20 bg-amber-500/5 text-amber-300 group-hover:bg-amber-500/10' : 'border-gray-500/20 bg-gray-500/5 text-gray-300 group-hover:bg-gray-500/10'}
+                                    `,
+                                                        children: item
+                                                    }, item, false, {
+                                                        fileName: "[project]/src/app/stack/page.tsx",
+                                                        lineNumber: 73,
+                                                        columnNumber: 41
+                                                    }, this))
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 71,
+                                                columnNumber: 33
+                                            }, this)
+                                        ]
+                                    }, idx, true, {
+                                        fileName: "[project]/src/app/stack/page.tsx",
+                                        lineNumber: 55,
                                         columnNumber: 29
                                     }, this))
                             }, void 0, false, {
-                                fileName: "[project]/src/app/projects/page.tsx",
-                                lineNumber: 80,
+                                fileName: "[project]/src/app/stack/page.tsx",
+                                lineNumber: 53,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mt-16 p-8 bg-[#161b22] border border-gray-800 rounded-3xl",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-xl font-bold text-white mb-6",
+                                        children: "My Setup"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/stack/page.tsx",
+                                        lineNumber: 91,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm font-mono",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-4 text-gray-400",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-gray-600",
+                                                        children: "OS:"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/stack/page.tsx",
+                                                        lineNumber: 94,
+                                                        columnNumber: 33
+                                                    }, this),
+                                                    " Windows 11 / WSL2 (Ubuntu)"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 93,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-4 text-gray-400",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-gray-600",
+                                                        children: "IDE:"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/stack/page.tsx",
+                                                        lineNumber: 97,
+                                                        columnNumber: 33
+                                                    }, this),
+                                                    " VS Code + JetBrains IDEA"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 96,
+                                                columnNumber: 29
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-4 text-gray-400",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-gray-600",
+                                                        children: "Terminal:"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/stack/page.tsx",
+                                                        lineNumber: 100,
+                                                        columnNumber: 33
+                                                    }, this),
+                                                    " Windows Terminal + ZSH"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/stack/page.tsx",
+                                                lineNumber: 99,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/stack/page.tsx",
+                                        lineNumber: 92,
+                                        columnNumber: 25
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/stack/page.tsx",
+                                lineNumber: 90,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/src/app/projects/page.tsx",
-                        lineNumber: 69,
+                        fileName: "[project]/src/app/stack/page.tsx",
+                        lineNumber: 42,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/src/app/projects/page.tsx",
-                lineNumber: 64,
+                fileName: "[project]/src/app/stack/page.tsx",
+                lineNumber: 39,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Footer$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                fileName: "[project]/src/app/projects/page.tsx",
-                lineNumber: 89,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Overlays$2f$AboutSheet$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                isOpen: aboutSheetOpen,
-                onClose: ()=>setAboutSheetOpen(false),
-                initialTab: activeSheetTab
-            }, void 0, false, {
-                fileName: "[project]/src/app/projects/page.tsx",
-                lineNumber: 91,
+                fileName: "[project]/src/app/stack/page.tsx",
+                lineNumber: 108,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/src/app/projects/page.tsx",
-        lineNumber: 60,
+        fileName: "[project]/src/app/stack/page.tsx",
+        lineNumber: 36,
         columnNumber: 9
     }, this);
 }
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__291c7d7d._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__cf1f033b._.js.map

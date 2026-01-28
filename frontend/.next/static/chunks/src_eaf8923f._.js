@@ -7,16 +7,98 @@ __turbopack_context__.s([
     ()=>ButtonDark
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+'use client';
 ;
 function ButtonDark(param) {
-    let { children } = param;
+    let { children, onClick } = param;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-        className: "flex p-3 bg-gray-900 text-white px-2 py-1 rounded-lg font-medium hover:bg-gray-800 active:scale-95 transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer",
-        children: children
-    }, void 0, false, {
+        onClick: onClick,
+        className: "group cursor-pointer relative px-6 py-2.5 rounded-xl bg-[#050505] font-medium text-white transition-all duration-300 overflow-hidden border border-white/10 hover:border-rose-500/40 hover:shadow-[0_0_20px_rgba(244,63,94,0.15)] flex items-center gap-2",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/5 to-transparent z-0"
+            }, void 0, false, {
+                fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                lineNumber: 16,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "relative z-10 text-sm tracking-wide group-hover:text-rose-100 transition-colors",
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                lineNumber: 18,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 flex items-center justify-center w-4 h-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                    className: "w-4 h-4 text-gray-400 group-hover:text-rose-400 transition-transform duration-300 transform group-hover:translate-x-1.5",
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    stroke: "currentColor",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        strokeWidth: 2.5,
+                        d: "M13 7l5 5m0 0l-5 5m5-5H6"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                        lineNumber: 29,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                    lineNumber: 23,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                lineNumber: 22,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute top-1.5 right-1.5",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "relative flex h-1 w-1",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-0 group-hover:opacity-75"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                            lineNumber: 40,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "relative inline-flex rounded-full h-1 w-1 bg-rose-500 opacity-0 group-hover:opacity-100 transition-opacity"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                    lineNumber: 39,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                lineNumber: 38,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 scale-x-0 group-hover:scale-x-100"
+            }, void 0, false, {
+                fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
+                lineNumber: 45,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/components/UI/buttons/ButtonDark.tsx",
-        lineNumber: 9,
-        columnNumber: 3
+        lineNumber: 12,
+        columnNumber: 9
     }, this);
 }
 _c = ButtonDark;
@@ -570,7 +652,7 @@ function NavBar() {
                                         children: "А"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 47,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -578,13 +660,13 @@ function NavBar() {
                                         children: "Газиев Али"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 50,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                lineNumber: 47,
+                                lineNumber: 46,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -599,13 +681,13 @@ function NavBar() {
                                                 className: getUnderlineClass('/')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                lineNumber: 60,
+                                                lineNumber: 58,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 56,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -617,13 +699,13 @@ function NavBar() {
                                                 className: getUnderlineClass('/about')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                lineNumber: 64,
+                                                lineNumber: 62,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
-                                        lineNumber: 62,
+                                        lineNumber: 60,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -635,13 +717,13 @@ function NavBar() {
                                                 className: getUnderlineClass('/stack')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                lineNumber: 68,
+                                                lineNumber: 66,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 64,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -653,50 +735,48 @@ function NavBar() {
                                                 className: getUnderlineClass('/projects')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                lineNumber: 72,
+                                                lineNumber: 70,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Header/NavBar.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 68,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                lineNumber: 57,
+                                lineNumber: 55,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    onClick: ()=>setIsContactOpen(true),
-                                    children: [
-                                        " ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$buttons$2f$ButtonDark$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-sm",
-                                                children: "Связаться"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Header/NavBar.tsx",
-                                                lineNumber: 80,
-                                                columnNumber: 37
-                                            }, this)
+                                    className: "flex items-center",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$buttons$2f$ButtonDark$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        onClick: ()=>setIsContactOpen(true),
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-sm",
+                                            children: "Связаться"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Header/NavBar.tsx",
-                                            lineNumber: 79,
-                                            columnNumber: 33
+                                            lineNumber: 77,
+                                            columnNumber: 37
                                         }, this)
-                                    ]
-                                }, void 0, true, {
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Header/NavBar.tsx",
+                                        lineNumber: 76,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
                                     fileName: "[project]/src/components/Header/NavBar.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 75,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                                lineNumber: 77,
+                                lineNumber: 74,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -720,7 +800,7 @@ function NavBar() {
                 onClose: ()=>setIsContactOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/components/Header/NavBar.tsx",
-                lineNumber: 89,
+                lineNumber: 85,
                 columnNumber: 13
             }, this)
         ]
@@ -1157,14 +1237,14 @@ function ProjectCard(param) {
                         className: "object-cover group-hover:scale-105 transition-transform duration-500"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 34,
+                        lineNumber: 32,
                         columnNumber: 21
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-full h-full flex items-center justify-center text-gray-700 font-mono",
                         children: "NO IMAGE"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 41,
+                        lineNumber: 39,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1172,13 +1252,13 @@ function ProjectCard(param) {
                         children: statusLabels[project.status]
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 47,
+                        lineNumber: 44,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                lineNumber: 31,
+                lineNumber: 30,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1189,7 +1269,7 @@ function ProjectCard(param) {
                         children: project.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 54,
+                        lineNumber: 50,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1197,7 +1277,7 @@ function ProjectCard(param) {
                         children: project.description
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 57,
+                        lineNumber: 53,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1207,12 +1287,12 @@ function ProjectCard(param) {
                                 children: tag
                             }, tag, false, {
                                 fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                lineNumber: 64,
+                                lineNumber: 59,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 62,
+                        lineNumber: 57,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1233,25 +1313,25 @@ function ProjectCard(param) {
                                             clipRule: "evenodd"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 68,
                                             columnNumber: 94
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 68,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Code"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 75,
+                                        lineNumber: 69,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                lineNumber: 73,
+                                lineNumber: 67,
                                 columnNumber: 25
                             }, this),
                             project.demoLink && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1263,7 +1343,7 @@ function ProjectCard(param) {
                                         children: "Live Demo"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 74,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -1278,30 +1358,30 @@ function ProjectCard(param) {
                                             d: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                            lineNumber: 81,
+                                            lineNumber: 75,
                                             columnNumber: 108
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 75,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                                lineNumber: 79,
+                                lineNumber: 73,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                        lineNumber: 71,
+                        lineNumber: 65,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Projects/ProjectCard.tsx",
-                lineNumber: 53,
+                lineNumber: 49,
                 columnNumber: 13
             }, this)
         ]

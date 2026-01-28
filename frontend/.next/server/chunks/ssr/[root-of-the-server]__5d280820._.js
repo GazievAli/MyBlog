@@ -821,16 +821,14 @@ function MatrixSnakes() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const canvas = canvasRef.current;
         if (!canvas) return;
-        const ctx = canvas.getContext('2d', {
-            willReadFrequently: true
-        });
+        const ctx = canvas.getContext('2d');
         if (!ctx) return;
         let animationFrameId;
         const cellSize = 20;
         let cols, rows;
         let snakes = [];
         let foods = [];
-        let particles = [];
+        let rainDrops = [];
         let isMatrixMode = false;
         let frameCounter = 0;
         const SNAKE_TIME = 60 * 60;
@@ -842,29 +840,11 @@ function MatrixSnakes() {
             '#a855f7',
             '#4ade80'
         ];
-        const img = new window.Image();
-        img.src = '/main.png';
-        let pixelData = [];
         const resize = ()=>{
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             cols = Math.ceil(canvas.width / cellSize);
             rows = Math.ceil(canvas.height / cellSize);
-            img.onload = ()=>{
-                const tempCanvas = document.createElement('canvas');
-                const tCtx = tempCanvas.getContext('2d');
-                if (tCtx) {
-                    tempCanvas.width = cols;
-                    tempCanvas.height = rows;
-                    tCtx.drawImage(img, 0, 0, cols, rows);
-                    const data = tCtx.getImageData(0, 0, cols, rows).data;
-                    pixelData = [];
-                    for(let i = 0; i < data.length; i += 4){
-                        const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
-                        pixelData.push(brightness > 100);
-                    }
-                }
-            };
             resetSimulation();
         };
         const createSnake = ()=>({
@@ -894,22 +874,20 @@ function MatrixSnakes() {
                     x: Math.floor(Math.random() * cols),
                     y: Math.floor(Math.random() * rows)
                 }));
-            particles = [];
+            rainDrops = [];
         };
         const startMatrixRain = ()=>{
             isMatrixMode = true;
-            particles = [];
-            for(let x = 0; x < cols; x++){
-                particles.push({
-                    x: x * cellSize,
-                    y: -Math.random() * canvas.height,
-                    speed: 5 + Math.random() * 10,
-                    char: Math.random() > 0.5 ? '0' : '1'
-                });
-            }
+            rainDrops = Array.from({
+                length: cols
+            }, ()=>({
+                    y: -Math.random() * rows,
+                    speed: 0.2 + Math.random() * 0.5,
+                    length: 5 + Math.floor(Math.random() * 15)
+                }));
         };
         const draw = ()=>{
-            ctx.fillStyle = 'rgba(13, 17, 23, 0.15)';
+            ctx.fillStyle = 'rgba(13, 17, 23, 0.2)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             frameCounter++;
             if (!isMatrixMode) {
@@ -917,7 +895,6 @@ function MatrixSnakes() {
                     snakes.forEach((snake, idx)=>{
                         if (!snake.alive) return;
                         let head = snake.body[0];
-                        // ИИ: поиск еды
                         let target = foods[0];
                         let minDist = Infinity;
                         foods.forEach((f)=>{
@@ -966,7 +943,6 @@ function MatrixSnakes() {
                         }
                     });
                 }
-                // Отрисовка
                 foods.forEach((f)=>{
                     ctx.fillStyle = '#ffffff';
                     ctx.shadowBlur = 10;
@@ -983,23 +959,21 @@ function MatrixSnakes() {
                 });
                 if (frameCounter > SNAKE_TIME) startMatrixRain();
             } else {
-                ctx.font = `${cellSize}px monospace`;
-                particles.forEach((p)=>{
-                    ctx.fillStyle = '#f43f5e';
-                    ctx.fillText(p.char, p.x, p.y);
-                    p.y += p.speed;
-                    if (p.y > canvas.height) p.y = -cellSize;
-                });
-                for(let y = 0; y < rows; y++){
-                    for(let x = 0; x < cols; x++){
-                        if (pixelData[y * cols + x]) {
-                            ctx.fillStyle = '#f43f5e';
-                            ctx.globalAlpha = Math.sin(frameCounter * 0.1 + x) * 0.3 + 0.4;
-                            ctx.fillRect(x * cellSize + 2, y * cellSize + 2, cellSize - 4, cellSize - 4);
+                rainDrops.forEach((drop, x)=>{
+                    for(let i = 0; i < drop.length; i++){
+                        const yPos = Math.floor(drop.y - i);
+                        if (yPos >= 0 && yPos < rows) {
+                            const opacity = 1 - i / drop.length;
+                            ctx.fillStyle = i === 0 ? `rgba(255, 255, 255, ${opacity})` : `rgba(244, 63, 94, ${opacity})`;
+                            ctx.fillRect(x * cellSize + 2, yPos * cellSize + 2, cellSize - 4, cellSize - 4);
                         }
                     }
-                }
-                ctx.globalAlpha = 1;
+                    drop.y += drop.speed;
+                    if (drop.y - drop.length > rows) {
+                        drop.y = 0;
+                        drop.speed = 0.2 + Math.random() * 0.5;
+                    }
+                });
                 if (frameCounter > SNAKE_TIME + MATRIX_TIME) resetSimulation();
             }
             animationFrameId = requestAnimationFrame(draw);
@@ -1017,7 +991,7 @@ function MatrixSnakes() {
         className: "absolute inset-0 z-0 pointer-events-none opacity-50"
     }, void 0, false, {
         fileName: "[project]/src/components/Header/MatrixSnakes.tsx",
-        lineNumber: 189,
+        lineNumber: 161,
         columnNumber: 9
     }, this);
 }

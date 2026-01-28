@@ -838,16 +838,14 @@ function MatrixSnakes() {
         "MatrixSnakes.useEffect": ()=>{
             const canvas = canvasRef.current;
             if (!canvas) return;
-            const ctx = canvas.getContext('2d', {
-                willReadFrequently: true
-            });
+            const ctx = canvas.getContext('2d');
             if (!ctx) return;
             let animationFrameId;
             const cellSize = 20;
             let cols, rows;
             let snakes = [];
             let foods = [];
-            let particles = [];
+            let rainDrops = [];
             let isMatrixMode = false;
             let frameCounter = 0;
             const SNAKE_TIME = 60 * 60;
@@ -859,32 +857,12 @@ function MatrixSnakes() {
                 '#a855f7',
                 '#4ade80'
             ];
-            const img = new window.Image();
-            img.src = '/main.png';
-            let pixelData = [];
             const resize = {
                 "MatrixSnakes.useEffect.resize": ()=>{
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
                     cols = Math.ceil(canvas.width / cellSize);
                     rows = Math.ceil(canvas.height / cellSize);
-                    img.onload = ({
-                        "MatrixSnakes.useEffect.resize": ()=>{
-                            const tempCanvas = document.createElement('canvas');
-                            const tCtx = tempCanvas.getContext('2d');
-                            if (tCtx) {
-                                tempCanvas.width = cols;
-                                tempCanvas.height = rows;
-                                tCtx.drawImage(img, 0, 0, cols, rows);
-                                const data = tCtx.getImageData(0, 0, cols, rows).data;
-                                pixelData = [];
-                                for(let i = 0; i < data.length; i += 4){
-                                    const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
-                                    pixelData.push(brightness > 100);
-                                }
-                            }
-                        }
-                    })["MatrixSnakes.useEffect.resize"];
                     resetSimulation();
                 }
             }["MatrixSnakes.useEffect.resize"];
@@ -920,26 +898,26 @@ function MatrixSnakes() {
                                 y: Math.floor(Math.random() * rows)
                             })
                     }["MatrixSnakes.useEffect.resetSimulation"]);
-                    particles = [];
+                    rainDrops = [];
                 }
             }["MatrixSnakes.useEffect.resetSimulation"];
             const startMatrixRain = {
                 "MatrixSnakes.useEffect.startMatrixRain": ()=>{
                     isMatrixMode = true;
-                    particles = [];
-                    for(let x = 0; x < cols; x++){
-                        particles.push({
-                            x: x * cellSize,
-                            y: -Math.random() * canvas.height,
-                            speed: 5 + Math.random() * 10,
-                            char: Math.random() > 0.5 ? '0' : '1'
-                        });
-                    }
+                    rainDrops = Array.from({
+                        length: cols
+                    }, {
+                        "MatrixSnakes.useEffect.startMatrixRain": ()=>({
+                                y: -Math.random() * rows,
+                                speed: 0.2 + Math.random() * 0.5,
+                                length: 5 + Math.floor(Math.random() * 15)
+                            })
+                    }["MatrixSnakes.useEffect.startMatrixRain"]);
                 }
             }["MatrixSnakes.useEffect.startMatrixRain"];
             const draw = {
                 "MatrixSnakes.useEffect.draw": ()=>{
-                    ctx.fillStyle = 'rgba(13, 17, 23, 0.15)';
+                    ctx.fillStyle = 'rgba(13, 17, 23, 0.2)';
                     ctx.fillRect(0, 0, canvas.width, canvas.height);
                     frameCounter++;
                     if (!isMatrixMode) {
@@ -948,7 +926,6 @@ function MatrixSnakes() {
                                 "MatrixSnakes.useEffect.draw": (snake, idx)=>{
                                     if (!snake.alive) return;
                                     let head = snake.body[0];
-                                    // ИИ: поиск еды
                                     let target = foods[0];
                                     let minDist = Infinity;
                                     foods.forEach({
@@ -1008,7 +985,6 @@ function MatrixSnakes() {
                                 }
                             }["MatrixSnakes.useEffect.draw"]);
                         }
-                        // Отрисовка
                         foods.forEach({
                             "MatrixSnakes.useEffect.draw": (f)=>{
                                 ctx.fillStyle = '#ffffff';
@@ -1031,25 +1007,23 @@ function MatrixSnakes() {
                         }["MatrixSnakes.useEffect.draw"]);
                         if (frameCounter > SNAKE_TIME) startMatrixRain();
                     } else {
-                        ctx.font = "".concat(cellSize, "px monospace");
-                        particles.forEach({
-                            "MatrixSnakes.useEffect.draw": (p)=>{
-                                ctx.fillStyle = '#f43f5e';
-                                ctx.fillText(p.char, p.x, p.y);
-                                p.y += p.speed;
-                                if (p.y > canvas.height) p.y = -cellSize;
-                            }
-                        }["MatrixSnakes.useEffect.draw"]);
-                        for(let y = 0; y < rows; y++){
-                            for(let x = 0; x < cols; x++){
-                                if (pixelData[y * cols + x]) {
-                                    ctx.fillStyle = '#f43f5e';
-                                    ctx.globalAlpha = Math.sin(frameCounter * 0.1 + x) * 0.3 + 0.4;
-                                    ctx.fillRect(x * cellSize + 2, y * cellSize + 2, cellSize - 4, cellSize - 4);
+                        rainDrops.forEach({
+                            "MatrixSnakes.useEffect.draw": (drop, x)=>{
+                                for(let i = 0; i < drop.length; i++){
+                                    const yPos = Math.floor(drop.y - i);
+                                    if (yPos >= 0 && yPos < rows) {
+                                        const opacity = 1 - i / drop.length;
+                                        ctx.fillStyle = i === 0 ? "rgba(255, 255, 255, ".concat(opacity, ")") : "rgba(244, 63, 94, ".concat(opacity, ")");
+                                        ctx.fillRect(x * cellSize + 2, yPos * cellSize + 2, cellSize - 4, cellSize - 4);
+                                    }
+                                }
+                                drop.y += drop.speed;
+                                if (drop.y - drop.length > rows) {
+                                    drop.y = 0;
+                                    drop.speed = 0.2 + Math.random() * 0.5;
                                 }
                             }
-                        }
-                        ctx.globalAlpha = 1;
+                        }["MatrixSnakes.useEffect.draw"]);
                         if (frameCounter > SNAKE_TIME + MATRIX_TIME) resetSimulation();
                     }
                     animationFrameId = requestAnimationFrame(draw);
@@ -1071,7 +1045,7 @@ function MatrixSnakes() {
         className: "absolute inset-0 z-0 pointer-events-none opacity-50"
     }, void 0, false, {
         fileName: "[project]/src/components/Header/MatrixSnakes.tsx",
-        lineNumber: 189,
+        lineNumber: 161,
         columnNumber: 9
     }, this);
 }
